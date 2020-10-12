@@ -1,0 +1,73 @@
+<body class="bodyaddformation">
+    <div class="edit-container">
+        <form method="post" action="/ateliers/form-edit/{{atelier._id}}" class="edit-product-form" enctype="multipart/form-data">
+            <h2 class="edit-formation"> Edit formation</h3>
+
+                <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-name" class="label-name label">Intitulé</label>
+                    <input id="sneaker-name" type="text" class="input-text input" placeholder="Intitulé"
+                        value="{{atelier.title}}" name="title">
+                </div>
+                <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-ref" class="label-ref label">Description</label>
+                    <input id="sneaker-ref" type="text" class="input-text input" placeholder="Description"
+                        value="{{atelier.description}}" name="description">
+                </div>
+                {{!-- <div class="form-item-wrapper flexed-item">
+      <label for="sneaker-size" class="label-ref label">Description courte</label>
+      <input id="sneaker-size" type="text" class="input-text input" placeholder="Description courte" value="{{formation.minidescription}}" name="minidescription">
+    </div> --}}
+                <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-descr" class="label-descr label">Image</label>
+                    <input id="sneaker-descr" type="file" class="input-text input" placeholder="Image"
+                        value="{{atelier.avatar}}" name="avatar">
+                </div>
+                <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-code" class="label-descr label">Code postal</label>
+                    <input id="sneaker-code" type="number" class="input-text input" placeholder="code-postale"
+                        value="{{atelier.code_postale}}" name="code_postale">
+                </div>
+                <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-ville" class="label-descr label">Ville</label>
+                    <input id="sneaker-ville" type="text" class="input-text input" placeholder="ville"
+                        value="{{atelier.ville}}" name="avatar">
+                </div>
+
+                <div class="formation-item">
+                    <label for="form-date" class="label-descr label">date</label>
+                    <input id="form-date" type="date" class="form-mini-descr form-input line"
+                        placeholder="ex: 12/09/2020" name="date"
+                        value="{{atelier.date}}">
+                </div>
+                <div class="formation-item">
+                    <label for="form-numero" class="label-descr label">numero</label>
+                    <input id="form-numero" type="number" class="form-mini-descr form-input line" placeholder="ex:70"
+                        name="numero"
+                        value="{{atelier.numero}}">
+                </div>
+                <div class="formation-item">
+                    <label for="form-rue" class="label-descr label">rue</label>
+                    <input id="form-rue" type="text" class="form-mini-descr form-input line"
+                        placeholder="ex:rue la belle ville" name="rue" value="{{atelier.rue}}">
+                </div>
+
+            <div class="form-item-wrapper flexed-item">
+                <label for="category" class="label-main-cat label">Categorie</label>
+                <select id="category" class="select" required name="category">
+                  {{#each categories}}
+                    <option value="{{this.id}}" > {{this.label}}</option>
+                  {{/each}}
+                </select>
+                </div>
+                {{!-- <div class="form-item-wrapper flexed-item">
+      <label class="label">Tags</label>
+      {{> form_tags_select}}
+    </div> --}}
+                <button class="edit-form-btn">Modifier cette formation</button>
+        </form>
+    </div>
+
+
+
+
+</body>

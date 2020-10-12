@@ -1,0 +1,24 @@
+<body class="signin-body">
+<div class="signin-container">
+  <h1 class="signin-title">Signup</h1>
+  <form method="post" action="/auth/user-signup" class="form" enctype="multipart/form-data">
+
+  <label class="label" for="input-username">Votre pseudo</label>
+  <input id="input-username" class="input" type="text" placeholder="sera visible par les utilisateurs du site"
+    name="username" value="test-user" />
+
+  <label class="label" for="input-email">Votre email</label>
+  <input id="input-email" class="input" type="email" placeholder="doit être une adresse valide" name="email"
+    value="test@mail.com">
+
+  <label class="label" for="input-password">Votre mot de passe</label>
+  <input id="input-password" class="input" type="password" placeholder="assez complexe par mesure de sécurité"
+    name="password" value="fake-pass-12345">
+
+  <label class="label" for="input-avatar">Votre avatar</label>
+  <input id="input-avatar" class="input" type="file" name="avatar">
+
+  <button class="buttonsub"><i class="far fa-arrow-alt-circle-right"></i></button>
+</form>
+</div>
+</body>

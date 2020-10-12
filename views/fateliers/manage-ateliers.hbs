@@ -1,0 +1,80 @@
+<body class="bodyaddformation">
+
+    <div class="manage-container">
+        <h1 class="hache-gestion-form">Gérer vos ateliers</h1>
+        <hr class="hr-gestion-form">
+        <table class="product-manage-table">
+            <thead>
+                <tr class="table-row">
+                    <th class="table-head">Image</th>
+                    <th class="table-head">Titre</th>
+                    <th class="table-head">Edit</th>
+                    <th class="table-head">Delete</th>
+                    <th class="table-head">Participants</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each ateliers}}
+                <tr class="table-row">
+                    <td class="table-division">
+                        <div class="formation-img">
+                            <img src="{{this.avatar}}" alt="img" class="table-image" />
+                        </div>
+                    </td>
+                    <td class="table-division">
+                        <div>{{this.title}}</div>
+                    </td>
+                    <td class="table-division">
+                        <a href="/ateliers/form-edit/{{this._id}}" data-id-formation="{{this._id}}"><i
+                                class="fa fa-edit table-icon"></i> </a>
+                    </td>
+                    <td class="table-division">
+                        <a href="/ateliers/form-delete/{{this._id}}" data-id-formation="{{this._id}}"
+                            aria-hidden="true">
+                            <i class="fa fa-trash table-icon"></i>
+                        </a>
+                    </td>
+                    <td class="table-division">
+                        <a href="/dashboard/user-check">
+                            <i class="fas fa-users"></i> </a>
+                    </td>
+                </tr>
+                {{/each}}
+                {{#unless ateliers}}
+                <tr>
+                    <td colspan="6" class="no-formations">Il n'y a aucun atelier pour le moment</td>
+                </tr>
+                {{/unless}}
+            </tbody>
+        </table>
+    </div>
+
+<section class="wrap-it-all">
+    {{#each ateliers}}
+    <section class="manage-ateliers-medium-container">
+        <section class="manage-ateliers-icons">
+            <div>
+                <a href="/ateliers/form-edit/{{this._id}}" data-id-formation="{{this._id}}"><i
+                        class="fa fa-edit table-icon"></i></a>
+            </div>
+            <div>
+                <a href="/ateliers/form-delete/{{this._id}}" data-id-formation="{{this._id}}" aria-hidden="true">
+                    <i class="fa fa-trash table-icon"></i>
+                </a>
+            </div>
+            <div>
+                <a href="/dashboard/user-check">
+                    <i class="fas fa-users"></i> </a>
+            </div>
+        </section>
+        <article class="manage-ateliers-p-n-date">
+            <p>{{this.title}}</p>
+            <p>{{#formatDate this.date}}{{/formatDate}}</p>
+            <figure class="manage-ateliers-pic"> <img src="{{this.avatar}}" alt="img" class="table-image" />
+            </figure>
+        </article>
+    </section>
+    {{/each}}
+    </section>
+</body>

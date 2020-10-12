@@ -1,0 +1,159 @@
+.menu-bar{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    background: black;
+    margin-left: 2rem;
+}
+
+.menuBurgerHeader{
+    width: 100%;
+    /* background: yellow; */
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav{
+    width: 800px;
+    list-style: none;
+    display: flex;
+}
+
+.nav li{
+    width: 100px;
+    text-align: center;
+    margin-left: 1rem;
+}
+.nav li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-power-off{
+    color: firebrick;
+}
+@media (max-width : 767px) {
+    .logo{
+        display: none;
+    }
+
+    #menu {
+        width: 35px;
+        height: 30px;
+        margin: 30px 0 20px 20px;
+        cursor: pointer; 
+    }
+    
+    /* giving all lines the same color*/
+    .bar {
+        height: 5px;
+        width: 100%;
+        background: #b81568;
+        display: block;
+        border-radius: 5px;
+        transition: 0.3s ease;
+    }
+    
+    /* bringing the 1st line up and bottom line down*/
+    #bar1 {
+        transform: translateY(-4px);
+    }
+    
+    #bar3 {
+        transform: translateY(4px);
+    }
+    
+    /* the menu*/
+    /* changing the links color*/
+    /* removing underline from links*/
+    .nav li a{
+        color: #fff;
+        text-decoration: none;
+    }
+     
+    .nav li a:hover{
+        font-weight: bold;
+    }
+    
+    /* removing bullets from list*/
+    .nav li{
+        list-style: none;
+        padding: 16px 0;
+    }
+    
+    /* styling the nav with some margin n padding*/
+    .nav{
+        padding: 0;
+        margin: 0 20px 0 20px;
+        transition: 0.3s ease;
+        display: none;
+    }
+    
+    /*the class triggered by a toggle*/
+    /* to make the X sign*/
+    /* making the middle line transparent*/
+    .change .bar {
+        background: #ffffff;
+    }
+    
+    .change #bar1 {
+        transform: translateY(4px) rotateZ(-45deg);
+    }
+    
+    .change #bar3 {
+        transform: translateY(-6px) rotate(45deg);
+    }
+    
+    .change #bar2 {
+        opacity: 0;
+    }
+    
+    /*done after the nav toggle*/
+    .change{
+        display: block;
+    }
+    
+    /*circled div*/
+    .menu-bg, #menu-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    
+    .menu-bg{
+        z-index: 1;
+        width: 0;
+        height: 0;
+        margin: 30px 0 20px 20px;
+        background: #222;
+        /* background: radial-gradient(circle, #f1ebeb, #e4c1ad ); */
+        border-radius: 50%;
+        transition: 0.3s ease;
+    }
+    
+    #menu-bar{
+        z-index: 2;
+    }
+    
+    /*toggle of the circle*/
+    .change-bg{
+        width: 550px;
+        min-height: 700px;
+        transform: translate(-60%, -30%) ;
+    }
+
+    li:last-of-type{
+        margin-bottom: 2rem;
+    }
+}
+

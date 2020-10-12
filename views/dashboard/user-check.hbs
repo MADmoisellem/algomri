@@ -1,0 +1,60 @@
+{{!-- <section class="participants-container">
+    {{#each categories}}
+    <section class="participants-category">
+        {{this.label}}
+        {{#each this.ateliers}}
+        {{this.title}}
+        {{#formatDate this.date}} {{/formatDate}}
+        <ul>{{#each this.participants}}
+            <li>{{this.email}}</li>
+            <li>{{this.username}}</li>
+            {{/each}}
+        </ul>
+        {{/each}}
+    </section>
+    {{/each}}
+    </body> --}}
+
+    <div class="manage-container">
+        <h1 class="hache-gestion-form">Gérer vos ateliers</h1>
+        <hr class="hr-gestion-form">
+        <table class="product-manage-table">
+            <thead>
+                <tr class="table-row">
+                    <th class="table-head">Catégorie</th>
+                    <th class="table-head">Titre</th>
+                    <th class="table-head">Date</th>
+                    <th class="table-head">Participants</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each categories}}
+                <tr class="table-row">
+                    <td class="table-division">
+                        <div>{{this.label}}</div>
+                    </td>
+                    {{#each this.ateliers}}
+                    <td class="table-division">
+                        <div>{{this.title}}</div>
+                    </td>
+                    <td class="table-division">
+                        <div>{{#formatDate this.date}} {{/formatDate}}
+                        </div>
+                    </td>
+                    {{#each this.participants}}
+                    <td class="table-division">
+                        <div>{{this.email}}</div>
+                    </td>
+                    {{/each}}
+                </tr>
+                {{/each}}
+                {{/each}}
+                {{#unless ateliers}}
+                <tr>
+                    <td colspan="6" class="no-formations">Il n'y a aucun atelier pour le moment</td>
+                </tr>
+                {{/unless}}
+            </tbody>
+        </table>
+    </div>

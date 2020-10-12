@@ -1,0 +1,26 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta id="site_url" http-equiv="X-UA-Compatible" content="ie=edge" data-url="{{site_url}}">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" href="/images/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+{{! login and signin font}}
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+{{!lettrine font}}
+<link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+{{! font for articles (lato replacement for calibri)}}
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+{{! font for secondary titles (roboto replacement for helvetica neue)}}
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+{{! font for main titles (hind replacement for futura)}}
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+{{!font awesome}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+{{!font axios}}
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    {{#each js}}
+    <script type="module" src="/js/{{this}}.js"></script>
+    {{/each}}
+<title>Les-Tourterelles</title>
+</head>

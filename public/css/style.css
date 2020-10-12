@@ -1,0 +1,607 @@
+@import './products.css';
+@import './ateliers-all.css';
+@import './admin-board.css';
+@import './form-user-edit.css';
+@import './manage-ateliers.css';
+@import './signin.css';
+@import './burgerMenu.css';
+@import './one-article.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header {
+  margin-bottom: 10rem;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.vert {
+  height: 50px;
+  background: rgb(34, 246, 34);
+}
+
+.text {
+  background: yellow;
+}
+
+.p {
+  display: flex;
+  flex-direction: column;
+  background: yellow;
+  margin-bottom: 1rem;
+}
+
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.joined-ateliers {
+  margin-bottom: 3rem;
+}
+
+/*HEADER*/
+
+
+/* .video-container{
+  width: 100%;
+  background: rgba(13, 19, 37, 0.879);
+  position: absolute;
+  top:0
+} */
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.video-overlay {
+  background-image: radial-gradient(circle at 36% 48%, #000000, rgba(11, 39, 65, 0.32) 87%, rgba(0, 0, 0, 0.0));
+  width: 100%;
+  height: calc(100vh);
+  min-height: 600px;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+
+#video {
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  width: 100%;
+  height: calc(100vh);
+  min-height: 600px;
+  object-fit: cover;
+}
+
+/*end of header*/
+
+/* SECTION PINKSKY*/
+#euop7x495dn71 {
+  position: absolute;
+  top: 100vh;
+}
+
+/* end of pinksky*/
+
+/* SECTION ABOUT*/
+.section-about-container {
+  margin-top: 45rem;
+  width: 100%;
+  min-height: 600px;
+}
+
+.section-about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.h2-light-article {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title-apropos {
+  margin-bottom: 6rem;
+  text-align: center;
+
+}
+
+.light-article-about {
+  width: 310px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.dots {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+}
+
+.dark-article-about {
+  width: 310px;
+  height: 400px;
+  background: black;
+  text-align: justify;
+  text-overflow: clip;
+  color: white;
+  margin-left: 1rem;
+  padding: 2rem;
+}
+
+/*don't forget for media queries*/
+/*black a propos article has a margin left*/
+
+/*end of about*/
+
+/*SECTION ABOUT SECOND PART WITH SLIDER*/
+/***********************************........Start of content2................*******/
+
+.main_content2 {
+  background-color: #fff;
+  width: 100%;
+  height: 580px;
+  margin-top: 5em;
+  /* background: red; */
+}
+
+.main_content2 section .left {
+  background-color: #e66767;
+  width: 310px;
+  height: 550px;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+.main_content2 section .left h4 {
+  color: #0e0202;
+  padding: 20px;
+  margin: 0px 80px 10px 20px;
+  letter-spacing: 5px;
+  padding-top: 60px;
+  text-shadow: 1px 1px whitesmoke;
+}
+
+.main_content2 section .left p {
+  padding: 10px;
+  margin: 0px 20px 10px 20px;
+  letter-spacing: 5px;
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  color: #000000e3;
+  line-height: 55px;
+  text-shadow: 1px 1px whitesmoke;
+}
+
+.main_content2 section .left span {
+  color: #fff;
+  text-shadow: 2px 2px#000000;
+}
+
+.main_content2 section .left .left_pragh {
+  color: #000000e0;
+  font-size: medium;
+  letter-spacing: normal;
+  line-height: 30px;
+}
+
+.main_content2 section .right {
+  border-radius: 20px;
+  position: absolute;
+}
+
+@media screen and (max-width:568px) {
+  .main_content2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 1200px;
+  }
+
+  .main_content2 section .left {
+    height: 310px;
+    width: 820px;
+    padding: 0;
+    position: relative;
+  }
+
+  .main_content2 section .left .left_pragh {
+    font-size: 10px;
+  }
+
+  .main_content2 section article.right {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 600px;
+    right: 15em
+  }
+
+  .main_content2 section .right input li div img {
+    max-width: 100%;
+  }
+
+  .slides {
+    padding: 0;
+    height: 200px;
+    min-width: 310px;
+    left: 0;
+    right: 5em;
+  }
+}
+
+/*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,start of image slider*/
+.slides {
+  padding: 0;
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: 15em;
+  top: -33em;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide-container {
+  display: block;
+}
+
+.slide {
+  top: 0;
+  opacity: 0;
+  height: 320px;
+  width: 320px;
+
+  display: block;
+  position: absolute;
+  transform: scale(0);
+  transition: all .7s ease-in-out;
+
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+
+
+}
+
+.nav label {
+  width: 1px;
+  height: 100%;
+  display: none;
+  position: absolute;
+  opacity: .5;
+  z-index: 9;
+  cursor: pointer;
+  transition: opacity .2s;
+  color: rgba(255, 255, 255, 0.767);
+  font-size: 156pt;
+  line-height: 380px;
+  font-family: "Varela Round", sans-serif;
+  text-shadow: 0px 0px 15px rgb(119, 119, 119);
+  /* background: rgb(196, 47, 255); */
+}
+
+.slide:hover+.nav label {
+  opacity: 0.5;
+}
+
+.nav label:hover {
+  opacity: 1;
+}
+
+.nav .next {
+  right: 0;
+}
+
+input:checked+.slide-container .slide {
+  opacity: 1;
+
+  transform: scale(1);
+
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked+.slide-container .nav label {
+  display: block;
+}
+
+.nav-dots {
+  width: 100%;
+  bottom: -110px;
+  left: 55px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked~.nav-dots label#img-dot-1,
+input#img-2:checked~.nav-dots label#img-dot-2,
+input#img-3:checked~.nav-dots label#img-dot-3,
+input#img-4:checked~.nav-dots label#img-dot-4,
+input#img-5:checked~.nav-dots label#img-dot-5,
+input#img-6:checked~.nav-dots label#img-dot-6 {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width:568px) {
+  .main_content1 {
+    height: 1200px;
+  }
+
+  .main_content1>section article {
+    width: 320px;
+    background: red;
+  }
+
+
+}
+
+/*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,end of image slider*/
+
+/*end of second section of about with slider*/
+
+/* SECTION ARTICLES*/
+.articles-container {
+  background-color: rgb(160, 159, 159);
+  width: 100%;
+  min-height: 1700px;
+  /* margin-top: 31px; */
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.articles-wrapper {
+  width: 100%;
+  min-height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* background: palegreen; */
+  /* margin-top: 1rem; */
+
+}
+
+.article-elements {
+  width: 310px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+
+  /* flex-wrap: wrap; */
+  /* background: #00B7FF; */
+  margin: 1rem;
+  position: relative;
+  font-family: 'Lato', sans-serif;
+}
+
+.article-elements .article-footer {
+  width: 100%;
+  /* background: burlywood; */
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.article-elements .article-footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.article-elements .article-date {
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+  margin: 1rem;
+}
+
+.article-elements .article-title {
+  margin: 3rem 1rem 2rem;
+  text-align: justify;
+}
+
+/* .articles-container h2, .articles-container h3{
+  margin-top: 2rem;
+} */
+
+.article-elements hr {
+  width: 100px;
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.article-description {
+  text-align: justify;
+  margin: 1rem;
+}
+
+.fa-long-arrow-alt-right {
+  margin-left: 1rem;
+}
+
+/*end of articles*/
+
+/* SECTION PARTENAIRES*/
+.partenaires-container {
+  width: 100%;
+  height: 500px;
+  background: rgb(206, 205, 205);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  justify-content: space-around;
+}
+
+.partenaire-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.partenaire-wrapper figure img {
+  height: 190px;
+  width: 190px;
+}
+
+/*end of partenaires*/
+
+/************************************************/
+/******            FORMULAIRE            ********/
+/************************************************/
+/* give a colour to the container */
+.formcontainer {
+  background: #222;
+  padding: 0 15% 15%;
+  width: 100%;
+}
+
+/* setting the parent element "form" to flex */
+/* so kids will be displayed vertically */
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* inputs will be white and each one of them will have some space from the 
+one peceeding it */
+
+.line {
+  color: white;
+  padding: 1%;
+  margin-top: 3%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #777;
+}
+
+/* the button to enter a msg is wider than the other inputs*/
+
+.mess {
+  color: white;
+  padding-bottom: 8%;
+}
+
+/* button to send the form : place further down than the other inputs */
+
+.buttonsub {
+  /* text-decoration: underline 1px solid white; */
+  margin: auto;
+  margin-top: 10%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  width: 65px;
+  height: 25px;
+  color: #fff;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #222 50%, #0099ff);
+  transition: background-position 0.3s;
+  cursor: pointer;
+}
+
+
+/* on hover of it, gimme a blue background */
+
+.buttonsub:hover {
+  background-color: #0099ff;
+  color: black;
+  font-weight: 600;
+  background-position: 0 100%;
+  border: none;
+}
+
+/* gathering my h and displaying it one under the other with flex */
+
+.hachegroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-weight: 100;
+  margin-bottom: 10%;
+}
+
+.hache2 {
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto Mono', monospace; */
+  font-weight: 400;
+
+  /* font-family: 'Piedra', cursive; */
+}
+
+/* still in my hgroup, specifiying different style for my h1 */
+
+.hache1 {
+  color: #eee;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  font-size: 12px;
+  padding: 5%;
+}

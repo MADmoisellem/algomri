@@ -1,0 +1,90 @@
+<body class="bodyaddformation">
+            <h2 class="hacheformation">Ajouter un atelier</h2>
+            <hr>
+    <section class="formation-container">
+
+        <section class="all-description">
+        <form action="/articles/form-edit/{{article._id}}" method="post" class="add-product-form" id="textarea-link">
+
+
+            <div class="formation-item">
+                <label for="form-title" class="label-name label">title</label>
+                <input id="form-title" type="text" class="form-title form-input line" placeholder="Intitulé de la formation" name="title"
+                value="{{article.title}}">
+            </div>
+
+            <div class="formation-item">
+                <label for="form-mini-descr" class="label-descr label">subtitle</label>
+                <input id="form-mini-descr" type="text" class="form-mini-descr form-input line" placeholder="subtitle" name="subtitle"
+                value="{{article.subtitle}}">
+            </div>
+{{!-- 
+            <div class="formation-item">
+                <label for="form-img" class="label-price label">Image</label>
+                <input id="form-img" type="file" class="form-img" name="avatar">
+            </div>
+
+            <div class="formation-item">
+                <label for="form-date" class="label-descr label">date</label>
+                <input id="form-date" type="date" class="form-mini-descr form-input line" placeholder="ex: 12/09/2020" name="date">
+            </div> --}}
+
+            <div class="formation-item">
+                <label for="form-ville" class="label-descr label">content</label>
+                <textarea form="textarea-link" id="form-ville" cols="80" rows="80" placeholder="saisir le contenu ici" name="content">
+                    {{article.content}}
+                </textarea>
+            </div>
+
+            {{!-- <div class="formation-item">
+                <label for="form-author" class="label-descr label">author</label>
+                <input id="form-author" type="text" class="form-mini-descr form-input line" placeholder="author" name="author">
+            </div> --}}
+            
+            <div class="formation-item">
+                <label for="form-desc" class="label-descr label">description</label>
+                <input id="form-desc" type="text" class="form-mini-descr form-input line" placeholder="description" name="description"
+                value="{{article.description}}">
+            </div>
+
+            <div class="formation-item">
+                <label for="form-author" class="label-descr label">author</label>
+                <input id="form-author" type="text" class="form-mini-descr form-input line" placeholder="author" name="author">
+            </div>
+            {{!-- <div class="formation-item">
+                <label for="form-numero" class="label-descr label">numero</label>
+                <input id="form-numero" type="number" class="form-mini-descr form-input line" placeholder="ex:70" name="numero">
+            </div>
+            <div class="formation-item">
+                <label for="form-rue" class="label-descr label">rue</label>
+                <input id="form-rue" type="text" class="form-mini-descr form-input line" placeholder="ex:rue la belle ville" name="rue">
+            </div> --}}
+
+            {{!-- <div class="form-item-wrapper flexed-item">
+                <label for="category" class="label-main-cat label">Categorie</label>
+                <select id="category" class="select" required name="category">
+                  {{#each categories}}
+                    <option value="{{this.id}}" > {{this.label}}</option>
+                  {{/each}}
+                </select> --}}
+
+    </section>
+
+    {{!-- <section class="long-description">
+
+        <label for="form-date" class="label-descr label">Description</label>
+      <input type="datetime" name="form-date" id=""> --}}
+        {{!-- <textarea id="form-date" type="date" class="form-descr form-input" placeholder="date" name="date"></textarea> --}}
+    </section>
+    {{!-- <div class="form-item-wrapper flexed-item">
+      <label for="tags" class="label">Tags</label> --}}
+    {{!-- {{> form_tags_select}} --}}
+    {{!-- </div> --}}
+    <div>
+    <button class="btn-add-formation" type="submit">Ajouter formation</button>
+    </div>
+    </form>
+</section>
+</body>
+
+  

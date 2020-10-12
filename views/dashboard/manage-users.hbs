@@ -1,0 +1,55 @@
+<body class="bodyaddformation">
+
+    <div class="manage-container">
+        <h1 class="hache-gestion-form">Gérer vos utilisateurs</h1>
+        <hr class="hr-gestion-form">
+        <table class="product-manage-table">
+            <thead>
+                <tr class="table-row">
+                    <th class="table-head">Name</th>
+                    <th class="table-head">Email</th>
+                    <th class="table-head">Role</th>
+
+                    <th class="table-head">Edit</th>
+                    <th class="table-head">Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each users}}
+                <tr class="table-row">
+
+                    <td class="table-division">
+                        <div>{{this.name}}</div>
+                    </td>
+                    <td class="table-division">
+                        <div>{{this.email}}</div>
+                    </td>
+                    <td class="table-division">
+                        <div>{{this.role}}</div>
+                    </td>
+
+                    <td class="table-division">
+                        <a href="/users/user-edit/{{this._id}}" data-id-user="{{this._id}}"><i
+                                class="fa fa-edit table-icon"></i> </a>
+                    </td>
+                    <td class="table-division">
+                        <a href="/users/user-delete/{{this._id}}" data-id-user="{{this._id}}" aria-hidden="true">
+                            <i class="fa fa-trash table-icon"></i>
+                        </a>
+                    </td>
+                    <td class="table-division">
+                        <a href="/dashboard/user-check" data-id-user="{{this._id}}" aria-hidden="true">
+                            <i class="fas fa-users"></i> </a>
+                    </td>
+                </tr>
+                {{/each}}
+                {{#unless users}}
+                <tr>
+                    <td colspan="6" class="no-formations">Il n'y a aucun utilisateur pour le moment</td>
+                </tr>
+                {{/unless}}
+            </tbody>
+        </table>
+    </div>
+</body>

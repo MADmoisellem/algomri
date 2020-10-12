@@ -1,0 +1,170 @@
+.welcome-admin-title {
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/*container of all*/
+.admin-board-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+}
+
+/******* start of container of managing sections AND its sections ********/
+/************************************************************************/
+.manage-container {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+
+}
+
+/*managing sections*/
+.admin-board-manage-sections {
+    min-width: 320px;
+    height: 200px;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    -webkit-box-shadow: 29px 53px 149px -45px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 29px 53px 149px -45px rgba(0, 0, 0, 0.71);
+    box-shadow: 29px 53px 149px -45px rgba(0, 0, 0, 0.71);
+    font-family: 'Comic Neue', cursive;
+    font-weight: 400;
+    margin-left: 5rem;
+    z-index: 1;
+
+}
+
+.admin-board-manage-sections a,
+.admin-board-form-sections a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/******** END *********/
+
+/*/******* start of container of forms AND its sections ********/
+.form-add-container {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 13rem;
+}
+
+
+/*forms sections*/
+.admin-board-form-sections {
+    background: white;
+    min-width: 320px;
+    height: 100px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    -webkit-box-shadow: 7px 53px 149px -45px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 7px 53px 149px -45px rgba(0, 0, 0, 0.71);
+    box-shadow: 7px 53px 149px -45px rgba(0, 0, 0, 0.71);
+    font-family: 'Comic Neue', cursive;
+    font-weight: 400;
+}
+
+/******** END *********/
+
+/************* SVG ****************/
+#Layer_1,
+.smartphone-left-right-wave {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -20;
+    background: none;
+}
+
+/******** END *********/
+
+/******** START of @media *********/
+
+@media (max-width: 768px) {
+    .admin-board-container {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* .manage-container {
+        width: 30%;
+    }
+    .form-add-container {
+        width: 20%;
+    } */
+    .manage-container {
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        /* position: absolute; */
+        width: 100%;
+    }
+
+    .form-add-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .welcome-admin-title {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .admin-board-form-sections,
+    .admin-board-manage-sections {
+        margin: 0;
+        padding: 0;
+    }
+
+    .admin-board-manage-sections {
+        text-align: center
+    }
+
+    #Layer_1 {
+        display: none;
+    }
+
+}
+
+@media (min-width : 567px) {
+    .smartphone-left-right-wave {
+        display: none;
+    }
+}
+
+@media (max-width : 568px) {
+
+    .admin-board-form-sections,
+    .admin-board-manage-sections {
+        margin-bottom: 2rem;
+        padding: 0;
+        background: white;
+    }
+
+    .manage-container {
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* @media (max-width : 568px){
+
+        } */

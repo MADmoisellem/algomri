@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const db = process.env.NODE_ENV === 'production' ? process.env.ATLAS_URI : process.env.MONGO_URI;
+const port = process.env.NODE_ENV === 'production' ? process.env.PORT : "8006";
 
 
 
@@ -16,6 +17,6 @@ mongoose.connection.on("error", () => {
 
 mongoose.connection.on("connected", () => {
   console.log("YAY : Database connected !!!",'@', db);
-  console.log("clik here to acces the website =>", `http://localhost:${process.env.PORT}`);
+  console.log("clik here to acces the website =>", `http://localhost:${port}`);
   
 });

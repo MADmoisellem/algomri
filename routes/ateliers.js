@@ -213,7 +213,7 @@ try {
       new: true
     });
     console.log("atelier avec participant >>>>>",updatedAtelier);
-    req.flash("error", "vous devez être connecté pour participer")
+    // req.flash("error", "vous devez être connecté pour participer")
     res.redirect("/ateliers/all")
   } catch (err) {
     next(err);

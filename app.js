@@ -19,16 +19,12 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 
 // SESSION SETUP
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
-    cookie: { maxAge: 60000 }, // in millisec
-    store: new MongoStore({
-      mongooseConnection: mongoose.connection,
-      ttl: 24 * 60 * 60, // 1 day
-    }),
-    saveUninitialized: true,
     resave: true,
+    saveUninitialized: true,
   })
 );
 

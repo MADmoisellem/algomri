@@ -1,6 +1,6 @@
 require("dotenv").config();
 require("./config/mongodb");
-const userModel = require("./models/User.js");
+const userModel = require("./models/Users.js");
 const mongoose = require("mongoose");
 
 const seedUser ={

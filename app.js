@@ -10,7 +10,8 @@ var logger = require('morgan');
 var cors = require('cors');
 const hbs = require("hbs");
 const flash = require("connect-flash");
-const dev_mode = process.env.NODE_ENV === 'production' ? false : true;
+const dev_mode = process.env.NODE_ENV === 'production' ? true : false;
+console.log(dev_mode);
 
 var app = express();
 
@@ -43,6 +44,7 @@ if (dev_mode === true) {
 app.use(require("./middlewares/exposeLoginStatus")); // expose le status de connexion aux templates
 app.use(require("./middlewares/exposeFlashMessage")); // affiche les messages dans le template
 
+/**/
 // app.locals.site_url = process.env.SITE_URL;
 
 // view engine setup

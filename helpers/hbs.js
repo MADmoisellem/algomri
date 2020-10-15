@@ -39,13 +39,16 @@ hbs.registerHelper("preventParticipation", function (eventDate) {
 })
 
 hbs.registerHelper("formatDate", function(date){
-  return moment(date).format('Do MMMM YYYY, h:mm a')
+  return moment(date).locale('fr').format('LLLL');
 });
 
 hbs.registerHelper("formatSmallDate", function(date){
-  return moment(date).format('Do MMMM YYYY')
+  return moment(date).locale('fr').format('ll')
 });
 
+// hbs.registerHelper("giveTime", function(date){
+//   return moment(date).locale('fr').format('LT')
+// });
 
 hbs.registerHelper("compare", function (lvalue, rvalue, options) {
   if (arguments.length < 3)

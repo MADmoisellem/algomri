@@ -1,46 +1,63 @@
 <h1 class="welcome-admin-title">Bienvenue sur votre espace de gestion</h1>
 <div class="admin-board-container">
-    
-    <div class="manage-container">
-        <section class="admin-board-manage-sections"><a href="/ateliers/manage-ateliers">gérer les ateliers</a></section>
-        <section class="admin-board-manage-sections"><a href="/manage-events">gérer les events</a></section>
-        <section class="admin-board-manage-sections"><a href="/manage-articles">gérer les articles</a></section>
-        <section class="admin-board-manage-sections"><a href="/users/manage-users">gérer les utilisateurs</a></section>
-        <section class="admin-board-manage-sections"><a href="/manage-messages">gérer les messages</a></section>
-    </div>
 
-    <div class="form-add-container">
-        <section class="admin-board-form-sections"><a href="/ateliers/form-atelier-add">ajouter des ateliers</a></section>
-        <section class="admin-board-form-sections"><a href="/form-events-add">ajouter des events</a></section>
-        <section class="admin-board-form-sections"><a href="/form-articles-add">ajouter des articles</a></section>
-    </div>
+  <article class="manage-container">
+    <article class="admin-board-manage">
+      <div class="admin-manage-wrap">
+        <section>
+          <a href="/ateliers/manage-ateliers">manage workshop</a>
+        </section>
+        <section class="admin-board-quick-link">
+          <i class="far fa-plus-square"></i>
+          <a href="/ateliers/form-atelier-add">quick add workshop</a>
+        </section>
+      </div>
+    </article>
+
+    <article class="admin-board-manage">
+      <div class="admin-manage-wrap">
+        <section>
+          <a href="/articles/manage-articles">manage articles</a>
+        </section>
+        <section class="admin-board-quick-link">
+          <i class="far fa-plus-square"></i>
+          <a href="/articles/form-add-articles">quick add articles</a>
+        </section>
+      </div>
+    </article>
+
+    <article class="admin-board-manage user">
+      <div class="admin-manage-wrap">
+        <section>
+          <a href="/users/manage-users">manage users</a>
+        </section>
+        <section class="admin-board-quick-link">
+          <i class="far fa-plus-square"></i>
+          <a href="/articles/form-add-articles">quick add articles</a>
+        </section>
+      </div>
+    </article>
+
+    <article class="admin-board-manage user">
+      <div class="admin-manage-wrap">
+        <section>
+          <a href="/users/manage-users">manage categpries</a>
+        </section>
+        <section class="admin-board-quick-link">
+          <i class="far fa-plus-square"></i>
+          <a href="/articles/form-add-articles">add categories</a>
+        </section>
+      </div>
+    </article>
+
+    {{!-- <section class="admin-board-manage-sections">
+    </section>
+    <section class="admin-board-manage-sections">
+      <a href="/users/manage-users">gérer les utilisateurs</a>
+    </section>
+    <div class="form-add-container"> --}}
+
+    </section>
 </div>
-{{!desktop svg}}
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #e66767;
-      }
-    </style>
-  </defs>
-  <path id="left-wave" class="cls-1" d="M72.5,768.5c-3.52-16.15-16-81.24,22-121,10.41-10.9,25.33-20.66,70-31,96.52-22.35,124.54.62,174-17,55.43-19.74,111.76-81.19,114-142,1.37-37.21-22.42-93.81-70-207a59.72,59.72,0,0,1-5-21c-1.94-41.39,41.27-85.94,88-99,25.34-7.08,39.51,1.21,63-5C556.73,118,593,91.09,622.5.5H-.5v768Z" transform="translate(0.5 -0.5)"/>
-  <path id="right-wave" class="cls-1" d="M1365.5.5v768h-608c19.1-69.58,47.93-94.35,71-104,14.35-6,18.9-3,67-9,54-6.75,81-10.12,102-20,5.09-2.4,62.11-30.21,82-89,12.33-36.43-1.17-50.58,3-87,8.46-73.88,73.84-101.82,106-150,31.54-47.25,44.66-134.26-41-309" transform="translate(0.5 -0.5)"/>
-</svg>
-{{!smartphone svg}}
-<svg class="smartphone-left-right-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 600">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #e66767;
-      }
-    </style>
-  </defs>
-  <g id="Layer_2" data-name="Layer 2">
-    <g id="Layer_1-2" data-name="Layer 1">
-      <path class="cls-1" d="M92,600c-63-50.53-74.7-88-72-114,3.47-33.39,32.23-62.62,19-98-2.92-7.82-8.49-17.5-13-36-.62-2.54-5.15-21.43-5-38,.42-47.93,39.79-60.07,34-93-1.87-10.6-5.31-5.74-28-50-8-15.68-12.85-26.53-10-39,2.29-10,8.58-17,13-21-5.83-13.29-9.08-20-8-23,3.69-10.15,19.76-10.15,32-16C68,65.29,83.59,47.75,90,0H0V600Z"/>
-      <path class="cls-1" d="M330,0V600c-23.78-15.24-52.35-39.34-57-73-3.93-28.48,12.93-37.24,29-87,7-21.73,27.24-87.05,6-155-9.18-29.39-14.76-22.91-20-46-13.33-58.75,25.33-89.31,26-154,.2-19-2.82-48.43-21-85"/>
-    </g>
-  </g>
-</svg>
-
+</article>
+</div>

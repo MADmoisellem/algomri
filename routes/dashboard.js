@@ -5,12 +5,13 @@ const atelierModel = require('../models/Ateliers')
 const categoryModel = require('../models/Categories')
 // const fileUploader = require("./../config/cloudinary");
 const protectPrivateRoute = require("../middlewares/protectPrivateRoute");
+const adminRoute = require("../middlewares/protectAdminRoute");
 
 //ADMIN DASHBOARD
-router.get("/admin-board",(req, res) => {
+router.get("/admin-board",adminRoute,(req, res) => {
     res.render("dashboard/admin-board")
 });
-router.get("/dashboard/manage-ateliers",(req, res) => {
+router.get("/dashboard/manage-ateliers",adminRoute,(req, res) => {
     res.render("manage-ateliers")
 });
 
@@ -22,8 +23,8 @@ router.get("/dashboard/manage-ateliers",(req, res) => {
 //         next(err)
 //     }
 // });
-
-router.get('/user-check', async (req, res, next) => {
+/*check which users are participating*/
+router.get('/user-check',adminRoute, async (req, res, next) => {
     try {
       const categories = []
       const ateliers = await atelierModel.find().populate('participants')

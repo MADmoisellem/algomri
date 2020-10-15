@@ -18,7 +18,7 @@ router.post(
       !updatedUserInfos.username ||
       !updatedUserInfos.email
     ) {
-      // todo => return message erreur
+      req.flash("veuillez vérifier que les infos fournies sont correctes");
     }
 
     if (req.file) updatedUserInfos.avatar = req.file.secure_url;
@@ -27,7 +27,7 @@ router.post(
       .findByIdAndUpdate(req.params.id, updatedUserInfos, { new: true }) // attention à l'option new: true
       .then((updatedUser) => {
         req.session.currentUser = updatedUser;
-        res.redirect("/profile");
+        res.redirect("/dashboard/profile");
       })
       .catch(next);
   }
@@ -53,7 +53,9 @@ router.post("/profile/edit/password/:id", (req, res, next) => {
 
       if (checkOldPassword === false) {
         // si le oldPassword renseigné n'est pas le bon
-        // todo => return message erreur
+        req.flash("error","veuillez vérifier que les infos fournies sont correctes");
+        res.redirect("/dashboard/profile");
+
       } else {
         // si oldPassword renseigné est correct
         const salt = bcrypt.genSaltSync(10); // on génère un sel pour renforcer le hashage
@@ -61,7 +63,7 @@ router.post("/profile/edit/password/:id", (req, res, next) => {
 
         user.password = hashed; // on remplace le mot de passe "en clair" par le hash
         user.save(); // et enfin on update le document user récupéré de la bdd avec les nouvelles infos
-        res.redirect("/profile");
+        res.redirect("/dashboard/profile");
       }
     })
     .catch(next);

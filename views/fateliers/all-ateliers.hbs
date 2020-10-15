@@ -29,10 +29,11 @@
     {{!-- <div class="single-formation"> --}}
     {{!-- le nom de la variable après le each vient de celui donné dans le render (nos routes)"> --}}
       {{#each categories}}
+{{#compare this.ateliers.length 1 operator=">=" }}
       <h1 class="ateliers-label">{{this.label}}</h1>
       <hr class="line-break">
       <section class="ateliersbox">
-      {{#each this.ateliers}}
+     {{#each this.ateliers}}
     <article class="container3">
       <div class="content3">
         <div class="content-overlay"></div>
@@ -45,7 +46,7 @@
           <p>{{this.adress.code_postale}}, {{this.adress.ville}}</p>
           <h4>QUAND</h4>
           <p id="atelier-date"> {{#formatDate this.date}} {{/formatDate}}</p>
-        </div>
+      </div>
         <div class="content-details fadeIn-bottom">
           <p class="content-text">{{this.description}}</p>
           {{!-- {{#unless (preventParticipation this.date)}}
@@ -62,6 +63,7 @@
       </div>
     </article>
     {{/each}}
+
       </section>
 
     {{!-- <div class="ateliers-container">
@@ -81,6 +83,7 @@
     {{/each}} --}}
     {{!-- </div> --}}
     {{!-- {{> mini_atelier }} --}}
+    {{/compare }} 
     {{/each}}
 
     {{#unless categories}}

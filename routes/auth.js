@@ -45,7 +45,7 @@ router.post("/signin", (req, res, next) => {
         // vaut null si pas d'user trouvé pour ce mail
         // si non .. retiourner une erreur au client
         req.flash("error", "Identifiants incorrects");
-        res.redirect("/signin");
+        res.redirect("/auth/signin");
       }
       // si oui comparer le mdp crypté stocké en bdd avec la chaîne en clair envoyée depuis le formulaire
       const checkPassword = bcrypt.compareSync(

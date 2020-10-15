@@ -1,1 +1,1 @@
-web : node ./algomri/bin/www
+web : node ./bin/www

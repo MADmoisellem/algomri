@@ -3,6 +3,7 @@ var router = express.Router();
 
 const articleModel = require('../models/Articles')
 const categoryModel = require('../models/Categories')
+const adminRoute = require("../middlewares/protectAdminRoute");
 
 // router.get('/form-add-articles', async (req, res, next) => {
 //   const categories = await categoryModel.find()
@@ -11,7 +12,7 @@ const categoryModel = require('../models/Categories')
 //     categories
 //   });
 // });
-router.get('/form-add-articles', async (req, res, next) => {
+router.get('/form-add-articles',adminRoute, async (req, res, next) => {
   res.render('farticles/form-add-articles')
 });
 
@@ -77,7 +78,7 @@ router.get("/one-article/:id", async (req,res,next)=>{
 });
 
 /*GET manage articles*/
-router.get("/manage-articles", async (req, res, next)=>{
+router.get("/manage-articles",adminRoute, async (req, res, next)=>{
   try{
     const articles = await articleModel.find()
     res.render("farticles/manage-articles", {articles})
@@ -87,7 +88,7 @@ router.get("/manage-articles", async (req, res, next)=>{
 });
 
 /* DELETE an article. */
-router.get("/delete/:id", async (req, res, next) => {
+router.get("/delete/:id", adminRoute, async (req, res, next) => {
   
   try {
     await articleModel.findByIdAndDelete(req.params.id)
@@ -98,7 +99,7 @@ router.get("/delete/:id", async (req, res, next) => {
 });
 
 /* UPDATE articles. */
-router.get('/form-edit/:id', async (req, res, next) => {
+router.get('/form-edit/:id', adminRoute,async (req, res, next) => {
   try {
     const article = await articleModel.findById(req.params.id);
     res.render("farticles/form-edit-articles", {

@@ -84,6 +84,7 @@
     <button class="btn-add-formation" type="submit">Ajouter formation</button>
   </div>
   </form>
+
   </section>
   {{!--added a form--}}
   {{!-- <form action="/tag-add" method="post" class="add-product-form">
@@ -98,7 +99,14 @@
     </form>
   </div> --}}
 
-  </div>
+<form method="post" action="/ateliers/category" class="form">
+    <h2 class="title">Ajouter une catégorie</h2>
+
+    <label for="label" class="is-clickable">Label *</label>
+    <input class="input" id="label" type="text" name="label" required>
+
+    <button class="btn">ok</button>
+</form>
 </body>
 
 {{!-- avatar: {
@@ -126,5 +134,4 @@
   category: {
     type: Schema.Types.ObjectId,
     ref: "Category"
-  },
-}); --}}
+  },; --}}

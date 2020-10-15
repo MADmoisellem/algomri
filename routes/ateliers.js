@@ -4,7 +4,8 @@ const atelierModel = require('../models/Ateliers')
 const categoryModel = require('../models/Categories')
 const langModel = require('../models/Languages')
 const fileUploader = require("./../config/cloudinary");
-const protectPrivateRoute = require("./../middlewares/protectPrivateRoute")
+const protectPrivateRoute = require("./../middlewares/protectPrivateRoute");
+const adminRoute = require("../middlewares/protectAdminRoute");
 const moment = require("moment");
 
 // ################################################################## FRONT ROUTES
@@ -41,7 +42,7 @@ router.get('/all', async (req, res, next) => {
 
 
 /* DISPLAY the form to add ateliers*/
-router.get('/form-atelier-add', async (req, res, next) => {
+router.get('/form-atelier-add',adminRoute, async (req, res, next) => {
   console.log("hello");
 
   const categories = await categoryModel.find();
@@ -55,7 +56,7 @@ router.get('/form-atelier-add', async (req, res, next) => {
 });
 
 /* GET manage-ateliers page */
-router.get('/manage-ateliers', function (req, res, next) {
+router.get('/manage-ateliers',adminRoute, function (req, res, next) {
   console.log("inside 'req.body'", req.body)
   atelierModel
     .find()
@@ -127,7 +128,7 @@ router.post("/atelier-add", fileUploader.single("avatar"), (req, res, next) => {
 });
 
 /* UPDATE ateliers. */
-router.get('/form-edit/:id', async (req, res, next) => {
+router.get('/form-edit/:id',adminRoute, async (req, res, next) => {
   try {
     const atelier = await atelierModel.findById(req.params.id)
     const categories = await categoryModel.find()
@@ -171,7 +172,7 @@ router.post('/form-edit/:id', fileUploader.single("image"), async (req, res, nex
 
 
 /* DELETE ateliers. */
-router.get('/form-delete/:id', async (req, res, next) => {
+router.get('/form-delete/:id',adminRoute, async (req, res, next) => {
   try {
     await atelierModel.findByIdAndDelete(req.params.id)
     res.redirect("/ateliers/manage-ateliers")
@@ -212,7 +213,7 @@ try {
       new: true
     });
     console.log("atelier avec participant >>>>>",updatedAtelier);
-    
+    req.flash("error", "vous devez être connecté pour participer")
     res.redirect("/ateliers/all")
   } catch (err) {
     next(err);
@@ -253,6 +254,17 @@ try {
 //   }
 // })
 
+//POST AND EDIT a category
+router.post("/category", (req, res)=>{
+  const newArticle = req.body
+  categoryModel.create(newArticle)
+  res.redirect("/ateliers/form-atelier-add")
+})
+
+router.get("/category/:id", (req, res)=>{
+  categoryModel.findByIdAndDelete(req.params.id)
+  res.redirect("/ateliers/form-atelier-add")
+})
 
 
 

@@ -1,0 +1,127 @@
+.profile-pic-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+}
+
+.separation-symbol{
+    font-size: 30px;
+}
+
+.flex-profile{
+    min-width: 320px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.current-user-name{
+    color: #e66767;
+}
+/*end of profile*/
+
+.profile-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*left side container : editing info and password*/
+.edit-profile-container{
+    min-height: 150px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.edit-info-wrapper{
+    margin-bottom: 1rem;
+}
+
+/*right side container : displaying all ateliers the user participates in*/
+.ateliers-preview-container{
+    min-height: 150px;
+    min-width: 320px;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.joined-ateliers{
+    background-color: rgb(250, 250, 250);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: 1
+    2px solid black;
+    -webkit-box-shadow: 7px 9px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 9px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 9px 19px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    position: relative;
+}
+
+.atelier-img-container{
+    width: 147px;
+    height: 100px;
+}
+
+.joined-ateliers img{
+    /* display: block; */
+    max-width: 100%;
+    /* height: auto; */
+}
+
+.atelier-p-container{
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+/*make div slanted*/
+
+.atelier-figure-container{
+    position: absolute;
+    left: -30px;
+    transform: skewX(-25deg);
+    overflow: hidden;
+}
+
+.profile-form{
+    background:rgb(223, 222, 218);
+}
+
+.password-form{
+    background:#e66767;
+}
+
+/*add margin to h2 title "formation suivis"*/
+
+
+@media (max-width:568px){
+    .joined-ateliers{
+        margin-bottom: 1rem;
+    }
+    .h2-inscrit-ateliers{
+        margin-top: 2rem;
+    }
+
+    .flex-profile{
+        min-width: 200px;
+    }
+    .profile-pic{
+        width: 75px;
+        height: 75px;
+    }
+    .flex-profile{
+        margin-top: 4rem;
+    }
+}

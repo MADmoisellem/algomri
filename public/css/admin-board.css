@@ -10,26 +10,31 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    /* background: red; */
     /* overflow: hidden; */
 }
 
-/******* start of container of managing sections AND its sections ********/
+/******* start of container : managing sections AND its sections ********/
 /************************************************************************/
 .manage-container {
-    width: 1000px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-
+justify-content: center;
+/* background: royalblue; */
 }
 
 /*managing sections*/
-.admin-board-manage-sections {
+.admin-board-manage {
+    background: gainsboro;
     min-width: 320px;
     height: 200px;
-    margin: 2rem;
+    /* margin: 2rem; */
     display: flex;
     justify-content: center;
+    align-items: center;
     -webkit-box-shadow: 29px 53px 149px -45px rgba(0, 0, 0, 0.71);
     -moz-box-shadow: 29px 53px 149px -45px rgba(0, 0, 0, 0.71);
     box-shadow: 29px 53px 149px -45px rgba(0, 0, 0, 0.71);
@@ -39,29 +44,60 @@
     z-index: 1;
 
 }
+.user{
+    margin-top: 3rem;
+}
+.admin-manage-wrap{
+    width: 200px;
+    height: 90px;
+    background: ghostwhite;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.admin-board-manage-sections a,
+.admin-board-quick-link{
+    width: 100px;
+    background: #e66767;
+    position: absolute;
+    bottom: -80px;
+    right: 50px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-plus-square{
+    color: white;
+}
+
+.admin-board-manage a,
 .admin-board-form-sections a {
     text-decoration: none;
     color: black;
     font-size: 18px;
 }
-
+.admin-board-quick-link a{
+    color: white;
+}
 /******** END *********/
 
 /*/******* start of container of forms AND its sections ********/
-.form-add-container {
-    width: 320px;
+/* .form-add-container {
+    min-width: 320px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 1rem;
     margin-bottom: 13rem;
-}
+} */
 
 
 /*forms sections*/
-.admin-board-form-sections {
+/* .admin-board-form-sections {
     background: white;
     min-width: 320px;
     height: 100px;
@@ -75,29 +111,29 @@
     box-shadow: 7px 53px 149px -45px rgba(0, 0, 0, 0.71);
     font-family: 'Comic Neue', cursive;
     font-weight: 400;
-}
+} */
 
 /******** END *********/
 
 /************* SVG ****************/
-#Layer_1,
+/* #Layer_1,
 .smartphone-left-right-wave {
     position: absolute;
     left: 0;
     top: 0;
     z-index: -20;
     background: none;
-}
+} */
 
 /******** END *********/
 
 /******** START of @media *********/
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .admin-board-container {
         flex-direction: column;
         min-height: 100vh;
-    }
+    } */
 
     /* .manage-container {
         width: 30%;
@@ -105,7 +141,7 @@
     .form-add-container {
         width: 20%;
     } */
-    .manage-container {
+    /* .manage-container {
         left: 0;
         width: 100%;
         min-height: 100vh;
@@ -115,10 +151,10 @@
         margin: 0;
         padding: 0;
         /* position: absolute; */
-        width: 100%;
-    }
+        /* width: 100%; */
+    /* } */
 
-    .form-add-container {
+    /* .form-add-container {
         margin: 0;
         padding: 0;
     }
@@ -140,11 +176,11 @@
 
     #Layer_1 {
         display: none;
-    }
+    } */
 
-}
+/* } */
 
-@media (min-width : 567px) {
+/* @media (min-width : 567px) {
     .smartphone-left-right-wave {
         display: none;
     }
@@ -162,7 +198,7 @@
     .manage-container {
         margin-bottom: 2rem;
     }
-}
+} */ 
 
 
 /* @media (max-width : 568px){

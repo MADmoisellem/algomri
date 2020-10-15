@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 require("./helpers/hbs"); // utils for hbs templates
 require("./config/mongodb"); // database initial setup
 var createError = require('http-errors');
@@ -10,8 +10,7 @@ var logger = require('morgan');
 var cors = require('cors');
 const hbs = require("hbs");
 const flash = require("connect-flash");
-const dev_mode = process.env.NODE_ENV === 'production' ? true : false;
-console.log(dev_mode);
+const dev_mode = false;
 
 var app = express();
 

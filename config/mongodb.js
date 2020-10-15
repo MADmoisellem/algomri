@@ -12,7 +12,7 @@ try {
   });
   
   mongoose.connection.on("connected", () => {
-    console.log("YAY : Database connected !!!",'@', db);
+    console.log("YAY : Database connected !!!");
     console.log("clik here to acces the website =>", `http://localhost:${process.env.PORT}`);
     
   });

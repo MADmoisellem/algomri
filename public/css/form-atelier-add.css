@@ -1,0 +1,53 @@
+.form-ateliers-container {
+    background: #e66767;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+
+}
+
+.form-atelier-wrapper {
+    background:white;
+    width: 320px;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    padding: 2rem;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.atelier-form-input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #e66767;
+    margin-bottom: 1rem;
+}
+
+.add-atelier-figure {
+    width: 100%;
+    height: auto;
+}
+
+.add-atelier-figure img {
+    max-width: 100%;
+}
+
+.form-category {
+    margin-top: 2rem;
+    border-radius: 12px;
+}
+
+.btn-ok-add{
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 30px;
+    background: #e66767;
+    border: none;
+    color: white;
+    border-radius: 15px;
+} 
+

@@ -1,55 +1,55 @@
 <body class="bodyaddformation">
-  <h2 class="hacheformation">Ajouter un atelier</h2>
-  <hr>
-  <section class="formation-container">
+  <section class="form-ateliers-container">
 
-    <section class="all-description">
-      <form action="/ateliers/atelier-add" method="post" class="add-product-form" enctype="multipart/form-data">
+    <section class="form-atelier-wrapper">
+      <form action="/ateliers/atelier-add" method="post" class="add-product-form" enctype="multipart/form-data" id="textarea-link">
+        <h2 class="hacheformation">Ajouter un atelier</h2>
+        <figure class="add-atelier-figure"><img src="/images/work.jpg" alt="working people"></figure>
 
 
-        <div class="formation-item">
+        <div class="atelier-item">
           <label for="form-title" class="label-name label">title</label>
-          <input id="form-title" type="text" class="form-title form-input line" placeholder="Intitulé de la formation"
-            name="title" value="Initiez-vous à la photographie">
+          <input id="form-title" type="text" class="form-title atelier-form-input"
+            placeholder="Intitulé de la formation" name="title" value="Initiez-vous à la photographie">
         </div>
 
-        <div class="formation-item">
-          <label for="form-mini-descr" class="label-descr label">description</label>
-          <input id="form-mini-descr" type="text" class="form-mini-descr form-input line"
-            placeholder="Description courte" name="description" value="une formation de 10h au coeur de Paris">
+        <div class="atelier-item">
+          <label for="form-img" class="label-img label">Image</label>
+          <input id="form-img" type="file" class="add-img" name="avatar">
         </div>
 
-        <div class="formation-item">
-          <label for="form-img" class="label-price label">Image</label>
-          <input id="form-img" type="file" class="form-img" name="avatar">
-        </div>
-
-        <div class="formation-item">
+        <div class="atelier-item">
           <label for="form-date" class="label-descr label">date</label>
-          <input id="form-date" type="datetime-local" class="form-mini-descr form-input line" placeholder="ex: 12/09/2020"
-            name="date">
+          <input id="form-date" type="datetime-local" class="form-mini-descr atelier-form-input"
+            placeholder="ex: 12/09/2020" name="date">
         </div>
 
-        <div class="formation-item">
+        <div class="atelier-item">
           <label for="form-ville" class="label-descr label">ville</label>
-          <input id="form-ville" type="text" class="form-mini-descr form-input line" placeholder="ex: bagnolet"
+          <input id="form-ville" type="text" class="form-mini-descr atelier-form-input" placeholder="ex: bagnolet"
             name="ville" value="Paris">
         </div>
 
-        <div class="formation-item">
+        <div class="atelier-item">
           <label for="form-code" class="label-descr label">code postale</label>
-          <input id="form-code" type="number" class="form-mini-descr form-input line" placeholder="ex:93170"
+          <input id="form-code" type="number" class="form-mini-descr atelier-form-input" placeholder="ex:93170"
             name="code_postale" value="75020">
         </div>
-        <div class="formation-item">
+        <div class="atelier-item">
           <label for="form-numero" class="label-descr label">numero</label>
-          <input id="form-numero" type="number" class="form-mini-descr form-input line" placeholder="ex:70"
+          <input id="form-numero" type="number" class="form-mini-descr atelier-form-input" placeholder="ex:70"
             name="numero" value="12">
         </div>
-        <div class="formation-item">
+        <div class="atelier-item">
           <label for="form-rue" class="label-descr label">rue</label>
-          <input id="form-rue" type="text" class="form-mini-descr form-input line" placeholder="ex:rue la belle ville"
-            name="rue" value="Avenue Gambetta">
+          <input id="form-rue" type="text" class="form-mini-descr atelier-form-input"
+            placeholder="ex:rue la belle ville" name="rue" value="Avenue Gambetta">
+        </div>
+
+        <div class="atelier-item">
+          <label for="form-mini-descr" class="label-descr label">description</label>
+          <textarea form="textarea-link" id="form-mini-descr" cols="30" rows="10" placeholder="saisir le contenu ici"
+            name="description"></textarea>
         </div>
 
         <div class="form-item-wrapper flexed-item">
@@ -60,10 +60,27 @@
             {{/each}}
           </select>
         </div>
+        <button class="btn-ok-add" type="submit">Ajouter formation</button>
     </section>
+    {{!add a category form}}
+    <section class="form-atelier-wrapper form-category">
+      <form method="post" action="/ateliers/category">
+        <h2 class="title">Ajouter une catégorie</h2>
+
+        <label for="label" class="is-clickable">Label *</label>
+        <input class="atelier-form-input" id="label" type="text" name="label" required>
+
+        <button class="btn-ok-add">ok</button>
+      </form>
+    </section>
+  </section>
+  </form>
+
+
+</body>
 
 {{!add a language}}
-    {{!-- <div class="form-item-wrapper flexed-item">
+{{!-- <div class="form-item-wrapper flexed-item">
       <label for="language" class="label-main-cat label">Langue</label>
       <select id="language" class="select" required name="languages">
         {{#each languages}}
@@ -71,68 +88,3 @@
         {{/each}}
       </select>
     </div> --}}
-    {{!-- <section class="long-description">
-
-        <label for="form-date" class="label-descr label">Description</label>
-      <input type="datetime" name="form-date" id=""> --}}
-    {{!-- <textarea id="form-date" type="date" class="form-descr form-input" placeholder="date" name="date"></textarea> --}}
-  </section>
-  {{!-- <div class="form-item-wrapper flexed-item">
-      <label for="tags" class="label">Tags</label> --}}
-  {{!-- {{> form_tags_select}} --}}
-  {{!-- </div> --}}
-  <div>
-    <button class="btn-add-formation" type="submit">Ajouter formation</button>
-  </div>
-  </form>
-
-  </section>
-  {{!--added a form--}}
-  {{!-- <form action="/tag-add" method="post" class="add-product-form">
-  <div class="add-tag-form">
-    <p id="add-tag-message" class="msg"></p>
-    <h3 class="form-title">Add tags</h3>
-    <div class="form-item-wrapper flexed-item">
-      <label for="tags" class="category-name label">Sneaker tag</label>
-      <input id="tags" type="text" class="input" placeholder="ex: Gangsta" name="label"> 
-    </div>
-    <button id="btn_new_tag" class="button-primary add-category-btn">Create this category</button>
-    </form>
-  </div> --}}
-
-<form method="post" action="/ateliers/category" class="form">
-    <h2 class="title">Ajouter une catégorie</h2>
-
-    <label for="label" class="is-clickable">Label *</label>
-    <input class="input" id="label" type="text" name="label" required>
-
-    <button class="btn">ok</button>
-</form>
-</body>
-
-{{!-- avatar: {
-    type: String,
-    default: "https://cdn.onlinewebfonts.com/img_258083.png",
-  },
-  date : Date,
-  title: String,
-  description : String,
-  adress : {
-    numero: Number,
-    rue: String,
-    code_postale: Number,
-    ville: String,
-    pays: String
-    },
-  participant: [{
-    type: Schema.Types.ObjectId,
-    ref: "User"
-  }],
-  author: {
-    type: Schema.Types.ObjectId,
-    ref: "User"
-  },
-  category: {
-    type: Schema.Types.ObjectId,
-    ref: "Category"
-  },; --}}

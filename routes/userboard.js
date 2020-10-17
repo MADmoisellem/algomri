@@ -69,4 +69,15 @@ router.post("/profile/edit/password/:id", (req, res, next) => {
     .catch(next);
 });
 
+
+/* DELETE ACCOUNT*/
+
+router.get("/delete-account/:id", (req, res)=>{
+  console.log("delete-account###########", req.params.id);
+  
+  userModel.findByIdAndDelete(req.params.id)
+  req.flash("success", "votre compte à bien été supprimé")
+  res.redirect("/")
+})
+
 module.exports = router;

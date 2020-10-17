@@ -31,6 +31,14 @@ app.use(
 // config des message flash, important :doit être déclarée après la config de la session
 app.use(flash());
 
+// app.use(function(req, res, next){
+//   // if there's a flash message in the session request, make it available 
+//   //in the response, then delete it
+//     res.locals.sessionFlash = req.session.sessionFlash;
+//     delete req.session.sessionFlash;
+//     next();
+//   });
+
 // import de middlewares customs
 if (dev_mode === true) {
   app.use(require("./middlewares/devMode")); // active le mode dev pour éviter les deconnexions

@@ -9,6 +9,7 @@
 @import './profile.css';
 @import './form-add-articles.css';
 @import './flashMessage.css';
+@import './form-atelier-add.css';
 
 * {
   margin: 0;
@@ -63,7 +64,7 @@ h2 {
 .video-wrapper {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100%; 
 }
 
 .video-overlay {
@@ -256,7 +257,7 @@ h2 {
 }
 
 /*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,start of image slider*/
-.slides {
+/* .slides {
   padding: 0;
   height: 200px;
   width: 200px;
@@ -319,9 +320,9 @@ h2 {
   font-family: "Varela Round", sans-serif;
   text-shadow: 0px 0px 15px rgb(119, 119, 119);
   /* background: rgb(196, 47, 255); */
-}
+/* } */
 
-.slide:hover+.nav label {
+/* .slide:hover+.nav label {
   opacity: 0.5;
 }
 
@@ -378,9 +379,9 @@ input#img-4:checked~.nav-dots label#img-dot-4,
 input#img-5:checked~.nav-dots label#img-dot-5,
 input#img-6:checked~.nav-dots label#img-dot-6 {
   background: rgba(0, 0, 0, 0.8);
-}
+} */
 
-@media screen and (max-width:568px) {
+/* @media screen and (max-width:568px) {
   .main_content1 {
     height: 1200px;
   }
@@ -391,7 +392,7 @@ input#img-6:checked~.nav-dots label#img-dot-6 {
   }
 
 
-}
+} */ 
 
 /*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,end of image slider*/
 
@@ -425,9 +426,9 @@ input#img-6:checked~.nav-dots label#img-dot-6 {
   display: flex;
   flex-direction: column;
   background: white;
-
   /* flex-wrap: wrap; */
   /* background: #00B7FF; */
+  text-overflow: ellipsis;
   margin: 1rem;
   position: relative;
   font-family: 'Lato', sans-serif;
@@ -474,9 +475,13 @@ input#img-6:checked~.nav-dots label#img-dot-6 {
 }
 
 .article-description {
+  width: 280px;
+  height: 140px;
   text-align: justify;
   margin: 1rem;
-}
+  background: red;
+  overflow: scroll;
+  }
 
 .fa-long-arrow-alt-right {
   margin-left: 1rem;
@@ -532,7 +537,7 @@ form {
 one peceeding it */
 
 .line {
-  color: white;
+  /* color: white; */
   padding: 1%;
   margin-top: 3%;
   background: transparent;

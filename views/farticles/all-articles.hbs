@@ -18,38 +18,40 @@
  </section> --}}
 <!-- THIS IS GOING TO BE A MAGENTO BUTTON -->
 {{!-- {{> nav}} --}}
- 
+
 <body class="body-formation">
 
-      <!--Start of main_content6 -->
+  <!--Start of main_content6 -->
   <div class="articles-container">
-        <h1> RECENT POSTS </h1>
-        <h2>Latest news and updates</h2>
-        <section class="articles-wrapper">
-    {{#each articles}} 
-    <article class="article-elements">
-          <hgroup>
-            <h3 class="article-date">{{#formatSmallDate this.date}} {{/formatSmallDate}}</h3>
-            <h3 class="article-title">{{this.title}}</h3>
-          </hgroup>
-            <p class="article-description">{{this.description}}</p>
-              <hr>
-            <div class="article-footer">
-            <p>{{this.author}}</p>
-            <a href="/articles/one-article/{{this._id}}">lire la suite<i class="fas fa-long-arrow-alt-right"></i></a>
-            </div>
-    </article>
-    {{/each}}
+    <h1> RECENT POSTS </h1>
+    <h2>Latest news and updates</h2>
+    <section class="articles-wrapper">
+      {{#each articles}}
+      <article class="article-elements">
+        <hgroup>
+          <h3 class="article-date">{{#formatSmallDate this.createdAt}} {{/formatSmallDate}}</h3>
+          <h3 class="article-title">{{this.title}}</h3>
+        </hgroup>
+        <div class="article-description">
+          <p>{{this.description}}</p>
+        </div>
+        <hr>
+        <div class="article-footer">
+          <p>{{this.author}}</p>
+          <a href="/articles/one-article/{{this._id}}">lire la suite<i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </article>
+      {{/each}}
 
-    {{#unless articles}}
-    <h2 class="no-formations">
-      Il n'y a aucun atelier pour le moment
-    </h2>
-    {{/unless}}
+      {{#unless articles}}
+      <h2 class="no-formations">
+        Il n'y a aucun atelier pour le moment
+      </h2>
+      {{/unless}}
     </section>
   </div>
 
-    {{!-- {{/each}} --}}
+  {{!-- {{/each}} --}}
 
   {{!-- </div> --}}
 </body>

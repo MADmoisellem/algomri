@@ -103,6 +103,12 @@
     background:#e66767;
 }
 
+.delete-account-title{
+    text-decoration: none;
+    font-size: 9px;
+    color: gray;
+}
+
 /*add margin to h2 title "formation suivis"*/
 
 

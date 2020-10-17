@@ -3,7 +3,12 @@
         {{!-- <div style="background-image:url({{currentUser.avatar}})" class="profile avatar"></div> --}}
         <figure><img class="profile-pic" src="{{currentUser.avatar}}" alt="user avatar"></figure>
         <span class="separation-symbol">|</span>
-        <h1 class="title">Bienvenue <span class="current-user-name">{{currentUser.username}}</span></h1>
+        <hgroup>
+            <h1 class="title">Bienvenue <span class="current-user-name">{{currentUser.username}}</span></h1>
+            <a href="/userboard/delete-account/{{currentUser._id}}" class="delete-account-title">
+                <h2>Supprimer mon compte</h2>
+            </a>
+        </hgroup>
     </div>
 </section>
 

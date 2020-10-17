@@ -1,4 +1,45 @@
-input:focus{
-    color: black;
+.form-article-container{
+    background: #e66767;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
+.form-article-wrapper{
+    background:white;
+    width: 720px;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    padding: 2rem;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.form-article-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input-article{
+    min-width: 400px;
+    border: none;
+    border-bottom: 2px solid #e66767;
+}
+
+#form-content{
+    border: 2px solid #e66767;
+}
+
+.add-article-figure{
+    width: 100%;
+    height: auto;
+}
+
+.add-article-figure img{
+    max-width: 100%;
+    height: 
+    auto;
+}

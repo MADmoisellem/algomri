@@ -1,10 +1,14 @@
+.hache-all-formations{
+    margin: 0 3rem;
+    text-align: center;
+}
 .ateliersbox {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     text-overflow: ellipsis;
-}
+} 
 
 
 .ateliers-btn-container {
@@ -27,8 +31,16 @@
 .line-break {
     border: none;
     height: 10px;
-    background-color: coral;
+    background-color: #e66767;
     margin-bottom: 2rem;
+    width: 300px;
+}
+.line-break-2 {
+    border: none;
+    height: 10px;
+    background-color: #4d4747;
+    margin-bottom: 2rem;
+    width: 500px;
 }
 
 /*css from ENSEMBLE*/

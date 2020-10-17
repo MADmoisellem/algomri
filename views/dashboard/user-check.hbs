@@ -15,7 +15,7 @@
     {{/each}}
     </body> --}}
 
-    <div class="check-participant-container">
+    <div class="check-participants-container">
         <h1 class="hache-gestion-form">Gérer vos ateliers</h1>
         <hr class="hr-gestion-form">
         <table class="product-manage-table">
@@ -39,7 +39,7 @@
                         </div>
                     </td>
                     <td class="table-division">
-                        <ul>
+                        <ul class="ul-participants">
                     {{#each this.participants}}
                             {{inc @index}}:<li>{{this.email}}</li>
                             <li>{{this.name}}</li>

@@ -1,18 +1,15 @@
-.fa-users {
-    color: rgb(10, 128, 97);
-}
 
 .formation-img img {
     max-width: 250px;
 }
 
-.manage-container {
+/* .manage-container {
     padding-bottom: 14em;
     padding-top: 5em;
     color: dimgrey;
     margin-left: 2em;
     margin-right: 2em;
-}
+} */
 
 .hache-gestion-form {
     text-align: center;
@@ -155,3 +152,9 @@ tr:nth-child(even) {
 .table-division{
     min-height: 50px;
 }
+
+.ul-participants li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }

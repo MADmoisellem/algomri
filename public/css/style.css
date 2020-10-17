@@ -10,6 +10,7 @@
 @import './form-add-articles.css';
 @import './flashMessage.css';
 @import './form-atelier-add.css';
+@import './check-participants.css';
 
 * {
   margin: 0;

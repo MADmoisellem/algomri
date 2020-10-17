@@ -1,4 +1,5 @@
 .form-article-container{
+    width: 100%;
     background: #e66767;
     display: flex;
     flex-direction: column;
@@ -43,4 +44,10 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     max-width: 100%;
     height: 
     auto;
+}
+
+@media (max-width: 768px){
+    .form-article-container{
+        background: white;
+    }
 }

@@ -15,13 +15,12 @@
     {{/each}}
     </body> --}}
 
-    <div class="manage-container">
+    <div class="check-participant-container">
         <h1 class="hache-gestion-form">Gérer vos ateliers</h1>
         <hr class="hr-gestion-form">
         <table class="product-manage-table">
             <thead>
                 <tr class="table-row">
-                    <th class="table-head">Catégorie</th>
                     <th class="table-head">Titre</th>
                     <th class="table-head">Date</th>
                     <th class="table-head">Participants</th>
@@ -31,26 +30,26 @@
             <tbody>
                 {{#each categories}}
                 <tr class="table-row">
-                    <td class="table-division">
-                        <div>{{this.label}}</div>
-                    </td>
                     {{#each this.ateliers}}
                     <td class="table-division">
                         <div>{{this.title}}</div>
                     </td>
                     <td class="table-division">
-                        <div>{{#formatDate this.date}} {{/formatDate}}
+                        <div>{{#formatSmallDate this.date}} {{/formatSmallDate}}
                         </div>
                     </td>
-                    {{#each this.participants}}
                     <td class="table-division">
-                        <div>{{this.email}}</div>
-                    </td>
+                        <ul>
+                    {{#each this.participants}}
+                            {{inc @index}}:<li>{{this.email}}</li>
+                            <li>{{this.name}}</li>
                     {{/each}}
+                        </ul>
+                    </td>
                 </tr>
                 {{/each}}
                 {{/each}}
-                {{#unless ateliers}}
+                {{#unless categories}}
                 <tr>
                     <td colspan="6" class="no-formations">Il n'y a aucun atelier pour le moment</td>
                 </tr>

@@ -90,7 +90,7 @@ router.post("/user-signup", uploader.single("avatar"), (req, res, next) => {
 
   if (!user.username || !user.password || !user.email) {
     // todo retourner un message d'erreur : remplir tous les champs requis + redirect
-    console.log("error1");
+    console.log("error");
     req.flash("warning", "Merci de remplir tous les champs requis.");
     res.redirect("/auth/signup");
   } else {

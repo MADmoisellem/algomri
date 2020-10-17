@@ -1,5 +1,5 @@
 const hbs = require("hbs");
-const moment = require("moment");
+const moment = require("moment"); 
 
 
 // CUSTOM HELPERS
@@ -113,6 +113,11 @@ hbs.registerHelper("isParticipating", function(participants){
   }else{
   return false
   }
+});
+
+hbs.registerHelper("inc", function(value, options)
+{
+    return parseInt(value) + 1;
 });
 
 /**

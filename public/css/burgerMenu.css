@@ -47,7 +47,7 @@
 .fa-power-off{
     color: firebrick;
 }
-@media (max-width : 767px) {
+@media (max-width : 768px) {
     .logo{
         display: none;
     }

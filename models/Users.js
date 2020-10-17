@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   avatar: {
     type: String,
-    default: "https://cdn.onlinewebfonts.com/img_258083.png",
+    default: "https://image.freepik.com/vecteurs-libre/illustration-caractere-personnes-detenant-icones-compte-utilisateur_53876-66068.jpg",
   },
   name: String,
   lastname : String,

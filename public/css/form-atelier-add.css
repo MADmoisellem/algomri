@@ -3,19 +3,19 @@
     display: flex;
     flex-direction: column;
     /* justify-content: space-around; */
-
+    padding: 5rem 0;
 }
 
 .form-atelier-wrapper {
-    background:white;
+    background: white;
     width: 320px;
     display: block;
     margin: auto;
     border-radius: 12px;
     padding: 2rem;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .atelier-form-input {
@@ -39,7 +39,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     border-radius: 12px;
 }
 
-.btn-ok-add{
+.btn-ok-add {
     cursor: pointer;
     display: block;
     margin: auto;
@@ -49,5 +49,5 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     border: none;
     color: white;
     border-radius: 15px;
-} 
-
+    margin-top: 2rem;
+}

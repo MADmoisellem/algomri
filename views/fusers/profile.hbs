@@ -53,9 +53,14 @@
             </div>
             <div class="atelier-p-container">
                 <p>{{this.title}}</p>
-                <p>{{#formatSmallDate this.date}} {{/formatSmallDate}}</p>
+                <p class="atelier-profile-date">{{#formatSmallDate this.date}} {{/formatSmallDate}}</p>
             </div>
-            <a href="/ateliers/cancel-participation/{{this._id}}">annuler</a>
+            <div class="atelier-icon-container">
+                <i class="far fa-trash-alt"></i>
+                <a href="/ateliers/cancel-participation/{{this._id}}">
+                    <i class="fas fa-user-times"></i>
+                </a>
+            </div>
         </article>
         {{/each}}
     </article>

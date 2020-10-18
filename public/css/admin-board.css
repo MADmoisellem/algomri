@@ -1,132 +1,52 @@
-/* .welcome-admin-title {
+.welcome-admin-title {
     text-align: center;
     font-family: 'Hind', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-}
-
-/*container of all*/
-/* .admin-board-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; */
-    /* background: red; */
-    /* overflow: hidden; */
-
-
-/******* start of container : managing sections AND its sections ********/
-/************************************************************************/
-/* .admin-manage-container {
-    width: 800px;
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-justify-content: center; */
-/* background: royalblue;
-}
-
-/*managing sections*/
-/* .admin-board-manage {
-    background: gainsboro;
-    min-width: 320px;
-    height: 200px; */
-    /* margin: 2rem; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-box-shadow: 29px 53px 149px -45px rgba(0, 0, 0, 0.71);
-    -moz-box-shadow: 29px 53px 149px -45px rgba(0, 0, 0, 0.71);
-    box-shadow: 29px 53px 149px -45px rgba(0, 0, 0, 0.71);
-    font-family: 'Comic Neue', cursive;
-    font-weight: 400;
-    margin-left: 5rem;
-    z-index: 1;
-
-}
-.user{
-    margin-top: 3rem;
-}
-.admin-manage-wrap{
-    width: 200px;
-    height: 90px;
-    background: ghostwhite;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.admin-board-quick-link{
-    width: 100px;
-    background: #e66767;
-    position: absolute;
-    bottom: -80px;
-    right: 50px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.fa-plus-square{
-    color: white;
-}
-
-.admin-board-manage a,
-.admin-board-form-sections a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-}
-.admin-board-quick-link a{
-    color: white;
-}  */
-/******** END *********/
-
-
-
-
-
-/**********************$$$$$$$$$$************************/
-/**********************$$$$$$$$$$************************/
-/**********************$$$$$$$$$$************************/
-/**********************$$$$$$$$$$************************/
+    margin: 5rem 0;
+} 
 /**********************$$$$$$$$$$************************/
 /*                  ATTEMPT NUMBER 3                    */
 /**********************$$$$$$$$$$************************/
-/**********************$$$$$$$$$$************************/
-/**********************$$$$$$$$$$************************/
-/**********************$$$$$$$$$$************************/
-
 
 .admin-manage-board-container{
     width: 100%;
     min-height: 100vh;
-    background: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    /* background: blueviolet; */
+    justify-content: center;
 }
 
 .admin-manage-board-wrapper{
-    width: 500px;
+    width: 400px;
     height: 500px;
-    background: cadetblue;
+    /* background: cadetblue; */
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .admin-manage-board-white{
-    width: 320px;
+    width: 310px;
     height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: coral;
+    background: white;
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
+    border-radius: 20px 20px 0 0;
+    -webkit-box-shadow: -5px -7px 41px -20px rgba(230,103,103,1);
+    -moz-box-shadow: -5px -7px 41px -20px rgba(230,103,103,1);
+    box-shadow: -5px -7px 41px -20px rgba(230,103,103,1);
+    /* border: 4px dashed gainsboro;
+    border-bottom: none; */
 
 }
 .admin-manage-board-white figure{
-    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 .admin-manage-board-white figure img{
     max-width: 100%;
@@ -152,15 +72,35 @@ justify-content: center; */
     background: #e66767;
     position: absolute;
     bottom: -40px;
-    right: 120px;
+    right: 110px;
 }
+
+.cropped-circle .fa-plus-circle{
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: 28px;
+    right: 35px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.cropped-circle .fa-plus-circle:hover{
+    font-size: 35px;
+    top: 25px;
+    right: 32px;
+}
+
 .cropped-square{
     width: 290px;
     height: 200px;
     background: #e66767;  
     position: absolute;
-    bottom: 80px;
+    bottom: 50px;
     border-radius: 15px;
+    -webkit-box-shadow: -16px 14px 19px -16px rgba(0,0,0,0.75);
+    -moz-box-shadow: -16px 14px 19px -16px rgba(0,0,0,0.75);
+    box-shadow: -16px 14px 19px -16px rgba(0,0,0,0.75);
 }
 
 
@@ -168,123 +108,3 @@ justify-content: center; */
 /* THE END*/
 
 
-/*/******* start of container of forms AND its sections ********/
-/* .form-add-container {
-    min-width: 320px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 1rem;
-    margin-bottom: 13rem;
-} */
-
-
-/*forms sections*/
-/* .admin-board-form-sections {
-    background: white;
-    min-width: 320px;
-    height: 100px;
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    -webkit-box-shadow: 7px 53px 149px -45px rgba(0, 0, 0, 0.71);
-    -moz-box-shadow: 7px 53px 149px -45px rgba(0, 0, 0, 0.71);
-    box-shadow: 7px 53px 149px -45px rgba(0, 0, 0, 0.71);
-    font-family: 'Comic Neue', cursive;
-    font-weight: 400;
-} */
-
-/******** END *********/
-
-/************* SVG ****************/
-/* #Layer_1,
-.smartphone-left-right-wave {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -20;
-    background: none;
-} */
-
-/******** END *********/
-
-/******** START of @media *********/
-
-/* @media (max-width: 768px) {
-    .admin-board-container {
-        flex-direction: column;
-        min-height: 100vh;
-    } */
-
-    /* .manage-container {
-        width: 30%;
-    }
-    .form-add-container {
-        width: 20%;
-    } */
-    /* .manage-container {
-        left: 0;
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        flex-wrap: wrap;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        /* position: absolute; */
-        /* width: 100%; */
-    /* } */
-
-    /* .form-add-container {
-        margin: 0;
-        padding: 0;
-    }
-
-    .welcome-admin-title {
-        font-size: 12px;
-        text-align: center;
-    }
-
-    .admin-board-form-sections,
-    .admin-board-manage-sections {
-        margin: 0;
-        padding: 0;
-    }
-
-    .admin-board-manage-sections {
-        text-align: center
-    }
-
-    #Layer_1 {
-        display: none;
-    } */
-
-/* } */
-
-/* @media (min-width : 567px) {
-    .smartphone-left-right-wave {
-        display: none;
-    }
-}
-
-@media (max-width : 568px) {
-
-    .admin-board-form-sections,
-    .admin-board-manage-sections {
-        margin-bottom: 2rem;
-        padding: 0;
-        background: white;
-    }
-
-    .manage-container {
-        margin-bottom: 2rem;
-    }
-} */ 
-
-
-/* @media (max-width : 568px){
-
-        } */

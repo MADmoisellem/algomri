@@ -1,19 +1,23 @@
-        {{! SECTION FORMULAIRE}}
-        <section class="formcontainer">
-            <hgroup class="hachegroup">
-                <h1 class="hache1">NOUS CONTACTER</h1>
-                <h2 class="hache2">Besoin d'une aide en particulier?</h2>
-            </hgroup>
-            <form action="/sendmessage" method="POST">
-                <label for="name"></label>
-                <input class="line" id="name" type="text" placeholder="NOM" value="Ororo Munroe" name="name">
-                <label for="mail" type="text"></label>
-                <input class="line" id="mail" type="text" placeholder="E-MAIL" value="ororo@munroe.com" name="email">
-                <label for="msg"></label>
-                <input class="line mess" id="msg" type="text" placeholder="MESSAGE"
-                    value="Bonjour, je voudrais avoir plus de détails sur l'ateliers photographie."
-                    name="message">
-                <button class="buttonsub" type="submit">Envoyer</button>
-            </form>
-        </section>
-        {{! end of formulaire}}
+{{! SECTION FORMULAIRE}}
+<section class="formcontainer">
+    <hgroup class="hachegroup">
+        <h1 class="hache1">NOUS CONTACTER</h1>
+        <h2 class="hache2">Besoin d'une aide en particulier?</h2>
+    </hgroup>
+    <form action="/sendmessage" method="POST">
+        <label for="mail" type="text"></label>
+        <input class="line" id="mail" type="text" placeholder="E-MAIL" name="email">
+        <label for="msg"></label>
+        {{!-- <label class="drop-down-subject" for="sujet">Sujet</label> --}}
+        <select class="label input drop-down-subject" id="subject" name="subject" required>
+            <option class="drop-down-select" value="" disabled selected> CHOOSE A SUBJECT</option>
+            <option value="Demande de partenariat">Demande de partenariat</option>
+            <option value="Partage d'experience">Partage d'experiences</option>
+            <option value="Entrer en contact avec un de nos auteurs">Entrer en contact avec un de nos auteurs</option>
+            <option value="Autre">Autre</option>
+        </select>
+        <input class="mess" id="msg" type="text" placeholder="YOUR MESSAGE HERE" name="message">
+        <button class="buttonsubcontact" type="submit">Envoyer</button>
+    </form>
+</section>
+{{! end of formulaire}}

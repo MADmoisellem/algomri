@@ -120,6 +120,14 @@ hbs.registerHelper("inc", function(value, options)
     return parseInt(value) + 1;
 });
 
+hbs.registerHelper("hasPassed", function(date, options) {
+  if(moment(date).isAfter(moment())){
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+    }
+});
+
 /**
  * fonction ci-dessous permet de formater les dates mongo en date lisible par l'utilisateur
  */

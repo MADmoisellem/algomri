@@ -46,6 +46,10 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     auto;
 }
 
+textarea{
+    resize: none;
+}
+
 @media (max-width: 768px){
     .form-article-container{
         background: white;

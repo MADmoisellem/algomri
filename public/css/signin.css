@@ -91,6 +91,13 @@
       margin-top: 5rem;
       padding: 5rem;
       position: relative;
+    }
+    
+    .signin-container a{
+      color : black;
+  }
+    .signin-container a:hover{
+      color : #e66767;
   }
 
   .signin-title{
@@ -113,7 +120,6 @@
     font-weight: 200;
     font-size: 28px;
   }
-
 
   .form .input{
       border: none;

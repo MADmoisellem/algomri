@@ -42,6 +42,7 @@
     </article>
 
     {{!ateliers container}}
+    {{#if isUser}}
     <article class="ateliers-preview-container">
         <h2 class="h2-inscrit-ateliers">Vous êtes inscrit aux ateliers suivants:</h2>
         {{#each joinedAtelier}}
@@ -54,7 +55,9 @@
                 <p>{{this.title}}</p>
                 <p>{{#formatSmallDate this.date}} {{/formatSmallDate}}</p>
             </div>
+            <a href="/ateliers/cancel-participation/{{this._id}}">annuler</a>
         </article>
         {{/each}}
     </article>
+    {{/if}}
 </section>

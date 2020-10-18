@@ -220,6 +220,29 @@ try {
   }
 
 });
+
+//route pour qu'un user participe à un atelier
+router.get('/cancel-participation/:id', async (req, res, next) => {
+  console.log(req.session.currentUser);
+try {
+    // 1 trouver l'atelier par id
+    // 2 ajouter l'id de user connecté dans l'array des participants (mongo : $push)
+    const updatedAtelier = await atelierModel.findByIdAndUpdate(req.params.id, {
+      $pull: {
+        participants: req.session.currentUser._id
+      }
+    }, {
+      new: true
+    });
+    console.log("atelier avec participant >>>>>",updatedAtelier);
+    // req.flash("error", "vous devez être connecté pour participer")
+    res.redirect("/dashboard/profile")
+  } catch (err) {
+    next(err);
+  }
+
+});
+
 //est ce l'atelier contient le participant
 //peut find si l'id de l'user est dans les participant de l'atelier (avec l'id correspondante)
 //si non : push

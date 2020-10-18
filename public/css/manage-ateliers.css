@@ -76,7 +76,7 @@ table th {
 }
 
 th {
-    background-color: rgb(251, 142, 70);
+    background-color: #e66767;
     color: white;
     height: 50px;
     padding: 10px;
@@ -91,7 +91,7 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(even) {
-    background-color: #f1d4a5;
+    background-color: #e66767;
 }
 
 .fa-trash {

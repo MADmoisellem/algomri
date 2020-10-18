@@ -56,6 +56,8 @@ router.get("/profile", protectPrivateRoute, async(req, res, next) => {
   try {
   const ateliers = await atelierModel.find().populate('participants')
   const currentUser = req.session.currentUser._id
+  console.log(req.session.currentUser._id);
+  
 
   const joinedAtelier = ateliers.filter(atelier => {
      return atelier.participants.find(participant => participant._id == currentUser
@@ -64,11 +66,11 @@ router.get("/profile", protectPrivateRoute, async(req, res, next) => {
   console.log("joinedAtelier>>>>>>>>>>", joinedAtelier);
   
     res.render("fusers/profile", {
-      joinedAtelier
+      joinedAtelier,
     })
   } catch (error) {
     next(error)
   }
-  })
+})
 
 module.exports = router;

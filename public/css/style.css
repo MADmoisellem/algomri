@@ -537,13 +537,17 @@ form {
 /* inputs will be white and each one of them will have some space from the 
 one peceeding it */
 
-.line {
-  /* color: white; */
+.line, .mess, .drop-down-subject{
   padding: 1%;
   margin-top: 3%;
   background: transparent;
   border: none;
   border-bottom: 1px solid #777;
+  /* color: white; */
+}
+
+.drop-down-subject{
+  color:  #777;
 }
 
 /* the button to enter a msg is wider than the other inputs*/
@@ -555,7 +559,7 @@ one peceeding it */
 
 /* button to send the form : place further down than the other inputs */
 
-.buttonsub {
+.buttonsubcontact {
   /* text-decoration: underline 1px solid white; */
   margin: auto;
   margin-top: 10%;
@@ -566,7 +570,7 @@ one peceeding it */
   height: 25px;
   color: #fff;
   background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, #222 50%, #0099ff);
+  background-image: linear-gradient(to bottom, #222 50%, #e66767);
   transition: background-position 0.3s;
   cursor: pointer;
 }
@@ -574,8 +578,8 @@ one peceeding it */
 
 /* on hover of it, gimme a blue background */
 
-.buttonsub:hover {
-  background-color: #0099ff;
+.buttonsubcontact:hover {
+  background-color: #e66767;
   color: black;
   font-weight: 600;
   background-position: 0 100%;

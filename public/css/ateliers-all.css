@@ -108,8 +108,8 @@
 }
 
 .content3 .content-overlay {
-    background: #e4c1ad;
-    /* background: rgba(230, 103, 103, 0.849); */
+background: #f7f6f5;
+background: radial-gradient(circle, #f1ece9 0%, rgba(163,163,163,1) 100%);    /* background: rgba(230, 103, 103, 0.849); */
     position: absolute;
     height: 100%;
     width: 100%;

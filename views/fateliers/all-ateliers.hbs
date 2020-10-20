@@ -93,7 +93,13 @@
     {{/unless}}
   {{!-- </div> --}}
   </section>
+  {{#each categories}}
   </div>
+    <div class="skew-container">{{this.label}}
+    <div class="skewed-div-left"></div>
+    <div class="skewed-div-right"></div>
+  </div>
+  {{/each}}
 </body>
 {{!html and css from ENSEMBLE for fade in fade out effect}}
 

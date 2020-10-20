@@ -91,7 +91,7 @@ h2 {
 /*end of header*/
 
 /* SECTION PINKSKY*/
-#birdscloud {
+#birdscloudcss {
   position: absolute;
   top: 90vh;
   z-index: -3;
@@ -248,7 +248,7 @@ h2 {
   }
 
   
-  #birdscloud{
+  #birdscloudcss{
     top: 0;
   }
 

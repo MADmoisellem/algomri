@@ -1,12 +1,17 @@
+.one-article-wrapper{
+    margin-top: -12rem;
+}
+.pinksky-header{
+    width: 100%;
+}
 .one-article-container{
-    background: rosybrown;
     width: 700px;
     min-height: 600px;
     display: block;
     margin: auto;
     position: relative;
-    padding: 2rem;
-    border: 1px solid black;
+    padding: 4rem;
+    border: 4px dashed black;
 }
 
 .one-article-wrap {
@@ -20,19 +25,18 @@
 }
 
 .one-article-title{
+    text-align: center;
     margin-bottom: 2rem;
-    background: burlywood;
 }
  
 .one-article-content{
-    background: darkcyan;
     white-space: pre-line;
     /* white-space: pre-wrap; */
     /* overflow-wrap: break-word; */
 }
 
 .one-article-content::first-letter {
-        color: white;
+        color: #e66767;
         font-family: 'Rouge Script', cursive;
         font-size: 350%;
         padding: 6px 3px;

@@ -1,0 +1,11 @@
+<section class="form-atelier-wrapper form-category">
+
+    <form method="post" action="/dashboard/category/edit/{{category._id}}">
+        <h2 class="title">Edit a category</h2>
+
+        <label for="label" class="is-clickable">Label *</label>
+        <input class="atelier-form-input" id="label" type="text" name="label" value="{{category.label}}">
+
+        <button class="btn-ok-add">ok</button>
+    </form>
+</section>

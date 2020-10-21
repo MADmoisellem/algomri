@@ -91,9 +91,9 @@ h2 {
 /*end of header*/
 
 /* SECTION PINKSKY*/
-#birdscloudcss {
+.birdscloud{
   position: absolute;
-  top: 90vh;
+  top: 100vh;
   z-index: -3;
 }
 
@@ -101,7 +101,7 @@ h2 {
 
 /* SECTION ABOUT*/
 .section-about-container {
-  margin-top: 45rem;
+  margin-top: 55rem;
   width: 100%;
   min-height: 600px;
 }
@@ -167,18 +167,16 @@ h2 {
   background-color: #fff;
   width: 100%;
   height: 580px;
-  margin-top: 5em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* background: red; */
+  margin-top: 5rem;
+padding-left: 13rem;
+  position: relative;
+  background: red;
 }
 
 .main_content2 section .left {
   background-color: #e66767;
   width: 310px;
-  height: 550px;
-  /* position: relative; */
+  height: 420px;
 }
 
 .main_content2 section .left h4 {
@@ -230,6 +228,12 @@ h2 {
     flex-direction: column;
     flex-wrap: wrap;
     height: 1200px;
+    padding: 0;
+  }
+
+  .carousel-container{
+    left: -200px;
+    top: 1200px;
   }
 
   .main_content2 section .left {
@@ -258,6 +262,14 @@ h2 {
 
 .carousel-container{
   width: 320px;
+  height: auto;
+  position: absolute;
+  left: 500px;
+  top: 90px;
+}
+
+.img-carousel{
+  max-width:100%;
   height: auto;
 }
 
@@ -369,7 +381,7 @@ ol, li {
 }
 
 .carousel__slide:before {
-  content: counter(item);
+  /* content: counter(item); */
   position: absolute;
   top: 50%;
   left: 50%;

@@ -10,7 +10,7 @@ var logger = require('morgan');
 var cors = require('cors');
 const hbs = require("hbs");
 const flash = require("connect-flash");
-const dev_mode = false;
+const dev_mode = true;
 
 var app = express();
 

@@ -1,0 +1,41 @@
+<body class="bodyaddformation">
+
+    <div class="manage-container">
+        <h1 class="hache-gestion-form">Manage your categories</h1>
+        <hr class="hr-gestion-form">
+        <table class="product-manage-table">
+            <thead>
+                <tr class="table-row">
+                    <th class="table-head">Label</th>
+                    <th class="table-head">Edit</th>
+                    <th class="table-head">Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each categories}}
+                <tr class="table-row">
+
+                    <td class="table-division">
+                        <div>{{this.label}}</div>
+                    </td>
+                    <td class="table-division">
+                        <a href="/dashboard/form-edit-category/{{this._id}}" data-id-user="{{this._id}}"><i
+                                class="fa fa-edit table-icon"></i> </a>
+                    </td>
+                    <td class="table-division">
+                        <a href="/dashboard/category-delete/{{this._id}}" data-id-user="{{this._id}}" aria-hidden="true">
+                            <i class="fa fa-trash table-icon"></i>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+                {{#unless categories}}
+                <tr>
+                    <td colspan="6" class="no-formations">No categories at the moment</td>
+                </tr>
+                {{/unless}}
+            </tbody>
+        </table>
+    </div>
+</body>

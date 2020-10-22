@@ -273,14 +273,14 @@ padding-left: 13rem;
 
 /*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,start of image slider*/
 .main_content2 section .left {
-  left: 230px;
+  left: 320px;
 }
 
 .carousel-container{
   width: 320px;
   height: auto;
   position: absolute;
-  left: 520px;
+  left: 590px;
   top: 90px;
 }
 
@@ -295,7 +295,7 @@ padding-left: 13rem;
   }
 }
 
-@media screen and (min-width: 320px){
+@media screen and (min-width: 320px) and (max-width: 520px){
   .main_content2 section .left {
     left: 4px;
   }

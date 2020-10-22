@@ -1,9 +1,7 @@
 .one-article-wrapper{
     margin-top: -12rem;
 }
-.pinksky-header{
-    width: 100%;
-}
+
 .one-article-container{
     width: 700px;
     min-height: 600px;
@@ -69,11 +67,14 @@
     }
 }
 
-@media (min-width : 768px) and (max-width : 1366px){
-    /* .one-article-container{
-        min-width: 900px;
-    } */
-    /* .one-article-content{
-        font-size: 32px;
-    } */
+@media (max-width : 767px){
+    #pinksky-header{
+        display: none;
+    }
+
+    .one-article-wrapper{
+        margin-top: 8rem;
+    }
+    
+
 }

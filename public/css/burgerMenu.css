@@ -63,7 +63,7 @@
     .bar {
         height: 5px;
         width: 100%;
-        background: #b81568;
+        background: #000000;
         display: block;
         border-radius: 5px;
         transition: 0.3s ease;

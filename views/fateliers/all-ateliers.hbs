@@ -21,50 +21,53 @@
 
 <body class="body-formation">
   <div class="hache-title">
-    <h1 class="hache-all-formations">Toutes nos ateliers</h1>
+    <h1 class="hache-all-formations">All our workshops</h1>
   </div>
   {{!-- <div class="formations-container"> --}}
   <section class="main_content3">
     {{!-- <div class="single-formation"> --}}
     {{!-- le nom de la variable après le each vient de celui donné dans le render (nos routes)"> --}}
-      {{#each categories}} 
-{{#compare this.ateliers.length 1 operator=">=" }}
-      <h1 class="ateliers-label">{{this.label}}</h1>
-      <hr class="line-break">
-      <hr class="line-break-2">
-      <section class="ateliersbox">
-     {{#each this.ateliers}}
-    <article class="container3">
-      <div class="content3">
-        <div class="content-overlay"></div>
-        <figure class="img-container"><img class="content-image" src="{{this.avatar}}" alt="{{this.name}}">
-        </figure>
-        <div class="ateliers-details">
-          <h3 class="content-title">{{this.title}}</h3>
-          <h4>OÙ?</h4>
-          <p>{{this.adress.numero}}, {{this.adress.rue}}</p>
-          <p>{{this.adress.code_postale}}, {{this.adress.ville}}</p>
-          <h4>QUAND</h4>
-          <p id="atelier-date"> {{#formatDate this.date}} {{/formatDate}}</p>
-      </div>
-        <div class="content-details fadeIn-bottom">
-          <p class="content-text">{{this.description}}</p>
-          {{!-- {{#unless (preventParticipation this.date)}}
+    {{#each categories}}
+    {{#compare this.ateliers.length 1 operator=">=" }}
+    <section class="bird-shaped-css">
+    <div class="skew-container">{{this.label}}
+      <div class="skewed-div-left"></div>
+      <div class="skewed-div-right"></div>
+    </div>
+    </section>
+    <section class="ateliersbox">
+      {{#each this.ateliers}}
+      <article class="container3">
+        <div class="content3">
+          <div class="content-overlay"></div>
+          <figure class="img-container"><img class="content-image" src="{{this.avatar}}" alt="{{this.name}}">
+          </figure>
+          <div class="ateliers-details">
+            <h3 class="content-title">{{this.title}}</h3>
+            <h4>WHERE?</h4>
+            <p>{{this.adress.numero}}, {{this.adress.rue}}</p>
+            <p>{{this.adress.code_postale}}, {{this.adress.ville}}</p>
+            <h4>WHEN</h4>
+            <p id="atelier-date"> {{#formatDate this.date}} {{/formatDate}}</p>
+          </div>
+          <div class="content-details fadeIn-bottom">
+            <p class="content-text">{{this.description}}</p>
+            {{!-- {{#unless (preventParticipation this.date)}}
           <a href="/ateliers/participate/{{this._id}}">
             <button class="ateliers-btn">s'inscrire</button>
           </a>
           {{/unless}} --}}
-          {{#if (preventParticipation this.date)}}
+            {{#if (preventParticipation this.date)}}
             <a href="/ateliers/participate/{{this._id}}">
-              <button class="ateliers-btn">s'inscrire</button>
+              <button class="ateliers-btn">JOIN</button>
             </a>
-          {{/if}}
+            {{/if}}
+          </div>
         </div>
-      </div>
-    </article>
-    {{/each}}
+      </article>
+      {{/each}}
 
-      </section>
+    </section>
 
     {{!-- <div class="ateliers-container">
       <h2>Title of the atelier : {{this.title}}</h2>
@@ -83,7 +86,7 @@
     {{/each}} --}}
     {{!-- </div> --}}
     {{!-- {{> mini_atelier }} --}}
-    {{/compare }} 
+    {{/compare }}
     {{/each}}
 
     {{#unless categories}}
@@ -91,15 +94,8 @@
       Il n'y a aucun atelier pour le moment
     </h2>
     {{/unless}}
-  {{!-- </div> --}}
-  </section>
-  {{#each categories}}
-  </div>
-    <div class="skew-container">{{this.label}}
-    <div class="skewed-div-left"></div>
-    <div class="skewed-div-right"></div>
-  </div>
-  {{/each}}
+    {{!-- </div> --}}
+
 </body>
 {{!html and css from ENSEMBLE for fade in fade out effect}}
 

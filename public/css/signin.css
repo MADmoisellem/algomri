@@ -90,6 +90,7 @@
       border: 1px dashed #e66767;
       margin-top: 5rem;
       padding: 4rem;
+      position: relative;
     }
 
     .signin-wrapper{
@@ -105,7 +106,7 @@
 
   .signin-title{
       position: absolute;
-      top: 142px;
+      top: -20px;
       background: #fff;
       border: none;
       font-family: 'Fira Sans Extra Condensed', sans-serif;
@@ -115,8 +116,8 @@
 
   .tosignup{
     position: absolute;
-    bottom: 305px;
-    right: 400px;
+    bottom: -15px;
+    right: 24px;
     background: #fff;
     border: none;
     font-family: 'Fira Sans Extra Condensed', sans-serif;

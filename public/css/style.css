@@ -170,13 +170,15 @@ h2 {
   margin-top: 5rem;
 padding-left: 13rem;
   position: relative;
-  background: red;
+  /* background: red; */
 }
 
 .main_content2 section .left {
   background-color: #e66767;
   width: 310px;
   height: 420px;
+  position: absolute;
+  left: 20px;
 }
 
 .main_content2 section .left h4 {
@@ -217,21 +219,37 @@ padding-left: 13rem;
   position: absolute;
 } */
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1366px){
+
+
+  .section-about-container{
+    margin-top: 1200px;
+  }
+}
+
+@media screen and (max-width:767px){
   .video-wrapper{
     display: none;
   }
+  .birdscloud{
+    top: 0;
+  }
+
+  .section-about-container{
+    margin-top: 12rem;
+  }
 }
+
 @media screen and (max-width:568px) {
-  .main_content2 {
+  /* .main_content2 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 1200px;
     padding: 0;
-  }
+  } */
 
-  .carousel-container{
+  /* .carousel-container{
     left: -200px;
     top: 1200px;
   }
@@ -240,7 +258,7 @@ padding-left: 13rem;
     height: 310px;
     padding: 0;
     position: relative;
-  }
+  } */
 
   .main_content2 section .left .left_pragh {
     font-size: 10px;
@@ -251,21 +269,44 @@ padding-left: 13rem;
     overflow: hidden;
   }
 
-  
-  #birdscloudcss{
-    top: 0;
-  }
-
 }
 
 /*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,start of image slider*/
+.main_content2 section .left {
+  left: 230px;
+}
 
 .carousel-container{
   width: 320px;
   height: auto;
   position: absolute;
-  left: 500px;
+  left: 520px;
   top: 90px;
+}
+
+@media screen and (max-width: 860px){
+  .main_content2 section .left {
+    left: 120px;
+  }
+  
+  .carousel-container{
+    left: 410px;
+    top: 90px;
+  }
+}
+
+@media screen and (min-width: 320px){
+  .main_content2 section .left {
+    left: 4px;
+  }
+  
+  .carousel-container{
+    left: 0;
+    top: 350px;
+  }
+  .partenaires-container{
+    min-height: 750px;
+  }
 }
 
 .img-carousel{
@@ -737,4 +778,9 @@ footer{
   color: #eee;
   text-align: center;
   padding-top: 2rem;
+}
+
+.solo-contact{
+  padding-top: 5rem;
+  min-height: 100vh;
 }

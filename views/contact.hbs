@@ -1,8 +1,8 @@
 {{! SECTION FORMULAIRE}}
-<section class="formcontainer">
+<section class="formcontainer solo-contact">
     <hgroup class="hachegroup">
-        <h1 class="hache1">NOUS CONTACTER</h1>
-        <h2 class="hache2">Besoin d'une aide en particulier?</h2>
+        <h1 class="hache1">HAVE SOME INQUIRIES?</h1>
+        <h2 class="hache2">CONTACT US</h2>
     </hgroup>
     <form action="/sendmessage" method="POST">
         <label for="mail" type="text"></label>
@@ -10,14 +10,14 @@
         <label for="msg"></label>
         {{!-- <label class="drop-down-subject" for="sujet">Sujet</label> --}}
         <select class="label input drop-down-subject" id="subject" name="subject" required>
-            <option class="drop-down-select" value="" disabled selected> CHOOSE A SUBJECT</option>
-            <option value="Demande de partenariat">Demande de partenariat</option>
-            <option value="Partage d'experience">Partage d'experiences</option>
-            <option value="Entrer en contact avec un de nos auteurs">Entrer en contact avec un de nos auteurs</option>
-            <option value="Autre">Autre</option>
+          <option class="drop-down-select" value="" disabled selected> CHOOSE A SUBJECT</option>
+          <option value="Demande de partenariat">Looking for partnership </option>
+          <option value="Partage d'experience">Looking to share your experience</option>
+          <option value="Entrer en contact avec un de nos auteurs">Volunteer</option>
+          <option value="Autre">Other</option>
         </select>
         <input class="mess" id="msg" type="text" placeholder="YOUR MESSAGE HERE" name="message">
         <button class="buttonsubcontact" type="submit">Envoyer</button>
-    </form>
-</section>
+      </form>
+    </section>
 {{! end of formulaire}}

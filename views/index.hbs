@@ -13,10 +13,10 @@
 
 {{! SECTION A PROPOS}}
 <section class="section-about-container">
-  <h1 class="title-apropos">À PROPOS</h1>
+  <h1 class="title-apropos">ABOUT</h1>
   <div class="section-about-wrapper">
     <article class="light-article-about">
-      <h2 class="h2-light-article">ABOUT</h2>
+      <h2 class="h2-light-article">Les Tourterelles</h2>
       <p>
         Did you know? Turtledoves are amongst if not the first migratory birds! Migration is driven primarily by
         food availability. The turtle-dove migrates between its European breeding grounds and Africa's vast Sahel belt
@@ -154,18 +154,18 @@
     {{! SECTION FORMULAIRE}}
     <section class="formcontainer">
       <hgroup class="hachegroup">
-        <h1 class="hache1">NOUS CONTACTER</h1>
-        <h2 class="hache2">Besoin d'une aide en particulier?</h2>
+        <h1 class="hache1">HAVE AN INQUIRY?</h1>
+        <h2 class="hache2">CONTACT US</h2>
       </hgroup>
       <form action="/sendmessage" method="POST">
         <input class="line" id="mail" type="text" placeholder="E-MAIL" name="email">
         {{!-- <label class="drop-down-subject" for="sujet">Sujet</label> --}}
         <select class="label input drop-down-subject" id="subject" name="subject" required>
           <option class="drop-down-select" value="" disabled selected> CHOOSE A SUBJECT</option>
-          <option value="Demande de partenariat">Demande de partenariat</option>
-          <option value="Partage d'experience">Partage d'experiences</option>
-          <option value="Entrer en contact avec un de nos auteurs">Entrer en contact avec un de nos auteurs</option>
-          <option value="Autre">Autre</option>
+          <option value="Demande de partenariat">Looking for partnership </option>
+          <option value="Partage d'experience">Looking to share your experience</option>
+          <option value="Entrer en contact avec un de nos auteurs">Volunteer</option>
+          <option value="Autre">Other</option>
         </select>
         <input class="mess" id="msg" type="text" placeholder="YOUR MESSAGE HERE" name="message">
         <button class="buttonsubcontact" type="submit">Envoyer</button>

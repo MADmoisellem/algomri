@@ -1,6 +1,5 @@
 const hbs = require("hbs");
-const moment = require("moment"); 
-
+const moment = require("moment");
 
 // CUSTOM HELPERS
 
@@ -23,9 +22,9 @@ awesome, 1 is less than 10 !!!
 hbs.registerHelper("preventParticipation", function (eventDate) {
   // return eventDate < actualDate ? true : false;
   // actualDate = moment().format('Do MMMM YYYY, h:mm a'); // September 25th 2020, 1:05:37 pm
-  console.log("DATE NON FORMATE : >>>>>",eventDate)
-  const date = moment(eventDate).format("MMM Do YY");  
-  console.log("juste la date>>>>>>>>>>>",date)
+  console.log("DATE NON FORMATE : >>>>>", eventDate);
+  const date = moment(eventDate).format("MMM Do YY");
+  console.log("juste la date>>>>>>>>>>>", date);
   // const rightNow = moment(actualDate).format('Do MMMM YYYY, h:mm a')
   //console.log("eventDate", date);
   // console.log("actualDate", actualDate);
@@ -33,17 +32,19 @@ hbs.registerHelper("preventParticipation", function (eventDate) {
   //const date =  "12/05/2014"
   // utilise la fonction suivante de moment
   // https://momentjs.com/docs/#/query/s
-  console.log("true || false  >>>>>>> de la date", moment(eventDate).isBefore());
-  return !moment(eventDate).isBefore()
-
-})
-
-hbs.registerHelper("formatDate", function(date){
-  return moment(date).format.('LLLL');
+  console.log(
+    "true || false  >>>>>>> de la date",
+    moment(eventDate).isBefore()
+  );
+  return !moment(eventDate).isBefore();
 });
 
-hbs.registerHelper("formatSmallDate", function(date){
-  return moment(date).format('ll')
+hbs.registerHelper("formatDate", function (date) {
+  return moment(date).format("LLLL");
+});
+
+hbs.registerHelper("formatSmallDate", function (date) {
+  return moment(date).format("ll");
 });
 
 // hbs.registerHelper("giveTime", function(date){
@@ -80,7 +81,7 @@ hbs.registerHelper("compare", function (lvalue, rvalue, options) {
     },
     typeof: function (l, r) {
       return typeof l == r;
-    }
+    },
   };
 
   if (!operators[operator])
@@ -107,25 +108,24 @@ hbs.registerHelper("setSelected", function (optionValue, searchedValue) {
   return optionValue.toString() === searchedValue.toString() ? "selected" : "";
 });
 
-hbs.registerHelper("isParticipating", function(participants){
-  if(participants){
-    return true
-  }else{
-  return false
+hbs.registerHelper("isParticipating", function (participants) {
+  if (participants) {
+    return true;
+  } else {
+    return false;
   }
 });
 
-hbs.registerHelper("inc", function(value, options)
-{
-    return parseInt(value) + 1;
+hbs.registerHelper("inc", function (value, options) {
+  return parseInt(value) + 1;
 });
 
-hbs.registerHelper("hasPassed", function(date, options) {
-  if(moment(date).isAfter(moment())){
+hbs.registerHelper("hasPassed", function (date, options) {
+  if (moment(date).isAfter(moment())) {
     return options.fn(this);
   } else {
     return options.inverse(this);
-    }
+  }
 });
 
 /**

@@ -13,7 +13,7 @@
 </section>
 
 {{! edit profile and password container}}
-<section class="profile-container">
+<section class="profile-container content-container">
     <article class="edit-profile-container">
         <div class="edit-info-wrapper">
             <form method="post" action="/userboard/profile/edit/infos/{{currentUser._id}}" class="form profile-form"
@@ -66,3 +66,4 @@
     </article>
     {{/if}}
 </section>
+  {{>_footer}}

@@ -39,7 +39,7 @@ hbs.registerHelper("preventParticipation", function (eventDate) {
 })
 
 hbs.registerHelper("formatDate", function(date){
-  return moment(date).format('LLLL');
+  return moment(date).format.('LLLL');
 });
 
 hbs.registerHelper("formatSmallDate", function(date){
